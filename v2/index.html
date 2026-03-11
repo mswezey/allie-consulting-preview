@@ -30,30 +30,7 @@ body {
   background: var(--ivory);
   color: var(--ink);
   overflow-x: hidden;
-  cursor: none;
-}
-
-/* ── Custom cursor ────────────────────────────────── */
-.cursor-dot {
-  width: 8px; height: 8px;
-  background: var(--copper);
-  border-radius: 50%;
-  position: fixed; top: 0; left: 0;
-  pointer-events: none; z-index: 9999;
-  transform: translate(-50%,-50%);
-  transition: transform 0.08s ease;
-}
-.cursor-ring {
-  width: 32px; height: 32px;
-  border: 1px solid rgba(184,115,51,0.5);
-  border-radius: 50%;
-  position: fixed; top: 0; left: 0;
-  pointer-events: none; z-index: 9998;
-  transform: translate(-50%,-50%);
-  transition: transform 0.18s ease, width 0.2s, height 0.2s;
-}
-body:has(a:hover) .cursor-ring,
-body:has(button:hover) .cursor-ring { width: 52px; height: 52px; }
+  }
 
 /* ── NAV ──────────────────────────────────────────── */
 nav {
@@ -363,6 +340,20 @@ nav.scrolled {
 }
 .cap-text { font-size: 0.92rem; font-weight: 400; color: var(--ink2); line-height: 1.5; }
 
+/* ── CREDIBILITY SNAPSHOT ─────────────── */
+.cred-wrap { background: var(--white); border-radius: 28px; margin: 3rem 0; padding: 3rem 3.5rem; border: 1px solid var(--warm); }
+.cred-inner { display: grid; gap: 2rem; }
+.cred-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 1rem; }
+.cred-item { padding: 1.5rem; border: 1px solid var(--warm); border-radius: 16px; background: var(--ivory); }
+.cred-metric { font-size: 2rem; font-family: 'Libre Baskerville', serif; color: var(--ink2); }
+.cred-item p { margin-top: 0.5rem; color: var(--mist); font-size: 0.9rem; }
+
+/* ── CASE BLOCK ──────────────────────────────── */
+.case-card { margin-top: 2.5rem; padding: 2rem; border-radius: 18px; border: 1px solid var(--warm); background: var(--ivory); }
+.case-label { font-family: 'DM Mono', monospace; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); margin-bottom: 1rem; display: block; }
+.case-metrics { list-style: none; display: grid; gap: 0.6rem; font-size: 0.95rem; color: var(--ink); }
+.case-metrics strong { color: var(--copper); margin-right: 0.25rem; }
+
 /* ── PROCESS ──────────────────────────────────────── */
 .process-wrap { background: var(--ink); }
 .process-inner {
@@ -421,6 +412,8 @@ nav.scrolled {
   margin-bottom: 1rem;
 }
 .step-body { font-size: 0.9rem; font-weight: 300; color: rgba(244,240,230,0.6); line-height: 1.7; }
+.deliverable { font-family: 'DM Mono', monospace; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(244,240,230,0.75); margin-top: 0.9rem; }
+.deliverable strong { color: var(--copper); font-weight: 400; margin-right: 0.4rem; }
 
 /* Style callout below steps */
 .process-callout {
@@ -750,9 +743,6 @@ footer {
 </head>
 <body>
 
-<div class="cursor-dot" id="cursorDot"></div>
-<div class="cursor-ring" id="cursorRing"></div>
-
 <!-- NAV -->
 <nav id="nav">
   <div class="nav-wordmark">Allie Swezey</div>
@@ -761,7 +751,7 @@ footer {
     <a href="#services">Services</a>
     <a href="#proof">Proof</a>
     <a href="#fit">Fit</a>
-    <a href="contact.html" class="nav-cta">Book a call</a>
+    <a href="contact.html" class="nav-cta">Book a 30-min strategy call</a>
   </div>
 </nav>
 
@@ -770,11 +760,11 @@ footer {
   <div class="hero-left">
     <div>
       <p class="hero-eyebrow">Strategic Consulting — Austin, TX</p>
-      <h1 class="hero-h1">From stuck<br>to <em>moving</em><br>in four weeks.</h1>
+      <h1 class="hero-h1">Turn operational chaos<br>into working systems<br>in four weeks.</h1>
       <p class="hero-sub">Strategy that survives contact with reality. Systems that run after she leaves. Execution that closes the gap between where you are and where you need to be.</p>
     </div>
     <div class="hero-actions">
-      <a href="contact.html" class="btn-hero-primary">Book a strategy call →</a>
+      <a href="contact.html" class="btn-hero-primary">Book a 30-minute strategy call →</a>
       <a href="sample.html" class="btn-hero-ghost">See a sample deliverable</a>
     </div>
   </div>
@@ -789,7 +779,7 @@ footer {
         <div class="stat-label">Sprint from intake to investor-ready strategy and operating plan</div>
       </div>
       <div class="hero-stat-row">
-        <div class="stat-num">0<span>drift</span></div>
+        <div class="stat-num">0<span>execution drift</span></div>
         <div class="stat-label">Initiatives she starts reach completion — with clear owners, timelines, and accountability loops</div>
       </div>
       <div class="hero-stat-row">
@@ -829,6 +819,35 @@ footer {
     <span class="ticker-item">Pattern Recognition <span class="sep">◆</span></span>
   </div>
 </div>
+
+<!-- EXPERIENCE SNAPSHOT -->
+<section class="cred-wrap">
+  <div class="cred-inner reveal">
+    <div>
+      <span class="label">Credibility snapshot</span>
+      <h2 class="section-h2">Real operating track record.</h2>
+      <p style="color:var(--mist);max-width:520px;">Enterprise IT sales, law firm financial ops, and cross-functional systems work — all with measurable outcomes.</p>
+    </div>
+    <div class="cred-grid">
+      <div class="cred-item">
+        <div class="cred-metric">9 yrs</div>
+        <p>Enterprise IT sales + licensing at SHI International (Fortune 1000 accounts)</p>
+      </div>
+      <div class="cred-item">
+        <div class="cred-metric">$1M+</div>
+        <p>Gross margin growth created in her territory within 18 months</p>
+      </div>
+      <div class="cred-item">
+        <div class="cred-metric">150–200%</div>
+        <p>Quota attainment, repeated multiple years, plus multiple 7-figure deals</p>
+      </div>
+      <div class="cred-item">
+        <div class="cred-metric">70% ↓</div>
+        <p>Law-firm daily reconciliation time after her Halsted workflow + AppFolio fixes</p>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ABOUT -->
 <div class="about-wrap" id="about">
@@ -910,24 +929,28 @@ footer {
         <div class="step-week">Week 1</div>
         <div class="step-title">Intake & Triage</div>
         <div class="step-body">Document ingest, stakeholder interviews, ledger review, and a working problem statement. Daily reconciliation report starts here for firms. Clear priorities documented by Friday.</div>
+        <p class="deliverable"><strong>Deliverable:</strong> Strategic problem map + daily reconciliation starter pack.</p>
       </div>
       <div class="process-step reveal reveal-delay-1">
         <div class="step-num">02</div>
         <div class="step-week">Week 2</div>
         <div class="step-title">Analysis</div>
         <div class="step-body">12-point framework: market sizing, competitive positioning, unit economics, GTM, tech feasibility, and red team scenario planning. No assumptions left unchallenged.</div>
+        <p class="deliverable"><strong>Deliverable:</strong> Decision framework + validated assumptions tracker.</p>
       </div>
       <div class="process-step reveal reveal-delay-2">
         <div class="step-num">03</div>
         <div class="step-week">Week 3</div>
         <div class="step-title">Deliverables</div>
         <div class="step-body">Business plan, investor-ready deck, VC-style red team memo with mitigations. For ops engagements: SOP library, workflow maps, and accountability framework.</div>
+        <p class="deliverable"><strong>Deliverable:</strong> Operating plan, investor deck, and VC-style red team memo.</p>
       </div>
       <div class="process-step reveal reveal-delay-3">
         <div class="step-num">04</div>
         <div class="step-week">Week 4</div>
         <div class="step-title">Conversion</div>
         <div class="step-body">Operational backlog, financial reconciliation playbook, and optional execution retainer kickoff. You leave with a plan you can execute on Monday — not a binder on a shelf.</div>
+        <p class="deliverable"><strong>Deliverable:</strong> Implementation roadmap with owners, timelines, and ready-to-run backlog.</p>
       </div>
     </div>
     <div class="process-callout reveal">
@@ -948,58 +971,57 @@ footer {
       <!-- Featured: Launchpad -->
       <div class="svc-card featured reveal">
         <div>
-          <span class="svc-tag">Most Popular · Full Sprint</span>
-          <h3 class="svc-name">Launchpad</h3>
+          <span class="svc-tag">Most Popular · Fundraise Ready</span>
+          <h3 class="svc-name">Investor Launchpad</h3>
           <p class="svc-price">Starting at $5,500</p>
-          <p class="svc-desc">The complete evaluation sprint — from idea or operational challenge through to investor-ready strategy, execution plan, and reconciliation framework.</p>
+          <p class="svc-desc">For founders heading into a raise, board meeting, or major initiative. Turns messy inputs into a defendable narrative and operating system investors trust.</p>
         </div>
         <ul class="svc-items">
-          <li>Full 12-point strategy evaluation</li>
-          <li>Investor-ready business plan + pitch deck</li>
-          <li>VC-style red team session with mitigations</li>
-          <li>GTM playbook + 12-month financial model</li>
-          <li>Operational backlog + accountability framework</li>
-          <li>Audit-ready reconciliation workflow (firms)</li>
-          <li>Four weeks. Two revision cycles.</li>
+          <li>Full 12-point evaluation + red team</li>
+          <li>Investor-ready business plan + deck</li>
+          <li>GTM plan + 12-month financials</li>
+          <li>Operational backlog + accountability loop</li>
+          <li>Reconciliation workflow for service firms</li>
+          <li>Four weeks, two revision cycles</li>
         </ul>
       </div>
       <!-- Strategy Sprint -->
       <div class="svc-card reveal reveal-delay-1">
-        <span class="svc-tag">Founders · Pre-Fundraise</span>
-        <h3 class="svc-name">Strategy Sprint</h3>
+        <span class="svc-tag">Founder-Led · Ops Chaos</span>
+        <h3 class="svc-name">Operational Reset Sprint</h3>
         <p class="svc-price">Starting at $2,500</p>
-        <p class="svc-desc">The essentials, fast. Executive summary, competitive positioning, and a business plan built to survive VC scrutiny.</p>
+        <p class="svc-desc">For teams where priorities, people, and systems drifted. Aligns leadership, maps bottlenecks, and hands back a Monday-ready plan.</p>
         <ul class="svc-items">
-          <li>Executive summary + business plan</li>
-          <li>Competitive positioning snapshot</li>
-          <li>Core risk identification</li>
-          <li>Two revision cycles</li>
+          <li>Executive summary + problem map</li>
+          <li>Competitive positioning + risk list</li>
+          <li>Process + ownership blueprint</li>
+          <li>Two revisions + action checklist</li>
         </ul>
       </div>
       <!-- Systems Audit -->
       <div class="svc-card reveal reveal-delay-2">
-        <span class="svc-tag">Established Firms · Ops</span>
-        <h3 class="svc-name">Systems & Ops Audit</h3>
-        <p class="svc-price">Custom scoped</p>
-        <p class="svc-desc">For firms where growth outpaced infrastructure. Workflow mapping, financial systems review, and implementation-ready recommendations.</p>
+        <span class="svc-tag">QBO · Accounting Pain</span>
+        <h3 class="svc-name">Financial Systems Cleanup</h3>
+        <p class="svc-price">From $3,500</p>
+        <p class="svc-desc">For law firms, agencies, and property managers drowning in unapplied payments, inconsistent invoicing, or multi-person reconciliation chaos.</p>
         <ul class="svc-items">
-          <li>Workflow mapping + bottleneck analysis</li>
-          <li>Tech stack & licensing audit</li>
-          <li>QBO / accounting systems review</li>
-          <li>Implementation-ready action plan</li>
+          <li>Daily reconciliation + AR workflow</li>
+          <li>AppFolio / RentManager vendor fixes</li>
+          <li>Escalation + collections playbook</li>
+          <li>Accountant hand-off + documentation</li>
         </ul>
       </div>
       <!-- Ongoing -->
       <div class="svc-card reveal reveal-delay-3">
-        <span class="svc-tag">Post-Sprint · Ongoing</span>
-        <h3 class="svc-name">Ongoing Partner</h3>
+        <span class="svc-tag">Post-Sprint · Retainer</span>
+        <h3 class="svc-name">Execution Partner Retainer</h3>
         <p class="svc-price">From $3,500/mo</p>
-        <p class="svc-desc">Monthly strategy and ops reviews, priority async access, and continued execution support. Only available to clients who've completed a sprint.</p>
+        <p class="svc-desc">Continued operating support once the sprint is done — monthly reviews, automation, vendor wrangling, and a calm operator in your corner.</p>
         <ul class="svc-items">
           <li>Monthly strategy + ops reviews</li>
-          <li>Priority async support</li>
+          <li>Priority async access</li>
           <li>Automation + vendor selection help</li>
-          <li>Retainer slots only after sprint</li>
+          <li>Available only after a sprint</li>
         </ul>
       </div>
     </div>
@@ -1068,6 +1090,15 @@ footer {
       </div>
     </div>
 
+    <div class="case-card reveal">
+      <span class="case-label">Case: Halsted Law Group</span>
+      <ul class="case-metrics">
+        <li><strong>70%</strong> reduction in daily reconciliation time</li>
+        <li><strong>100%</strong> of AppFolio / RentManager clients properly mapped</li>
+        <li><strong>$250K+</strong> in AR surfaced + collected via new escalation loop</li>
+      </ul>
+    </div>
+
     <div class="proof-stat-row">
       <div class="proof-stat reveal">
         <div class="proof-stat-num">$1M<em>+</em></div>
@@ -1089,8 +1120,8 @@ footer {
 <div class="fit-wrap" id="fit">
   <div class="fit-inner">
     <div class="fit-left reveal">
-      <span class="label">Best-fit clients</span>
-      <h2 class="section-h2">Where Allie's work has<br><em>the highest leverage.</em></h2>
+      <span class="label">Who this works best for</span>
+      <h2 class="section-h2">Where this engagement delivers<br><em>the most leverage.</em></h2>
       <p>She does her best work when the environment is real — real complexity, real stakes, real ambiguity. If everything is already figured out and someone just needs documentation, that is not the engagement. If there is genuine work to untangle, she is the person to do it.</p>
 
       <div class="fit-items">
@@ -1180,21 +1211,6 @@ footer {
 </footer>
 
 <script>
-// ── Cursor ──────────────────────────────────────────
-const dot  = document.getElementById('cursorDot');
-const ring = document.getElementById('cursorRing');
-let mx = 0, my = 0, rx = 0, ry = 0;
-document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
-(function animCursor() {
-  dot.style.left  = mx + 'px';
-  dot.style.top   = my + 'px';
-  rx += (mx - rx) * 0.14;
-  ry += (my - ry) * 0.14;
-  ring.style.left = rx + 'px';
-  ring.style.top  = ry + 'px';
-  requestAnimationFrame(animCursor);
-})();
-
 // ── Nav scroll ──────────────────────────────────────
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
