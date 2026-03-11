@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Book a Call — Allie Swezey Strategic Consulting</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Mono:wght@300;400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink:#1a1a18; --ink2:#2e2e2b; --copper:#b87333; --copper-l:#d4916a;
+  --ivory:#f4f0e6; --ivory2:#ede8d8; --warm:#ddd7c4; --muted:#7a7568; --white:#faf9f6;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Outfit',sans-serif;background:var(--ivory);color:var(--ink);overflow-x:hidden;cursor:none;min-height:100vh;}
+.cursor-dot{width:8px;height:8px;background:var(--copper);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);}
+.cursor-ring{width:32px;height:32px;border:1px solid rgba(184,115,51,0.5);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:transform 0.18s ease,width 0.2s,height 0.2s;}
+body:has(a:hover) .cursor-ring,body:has(button:hover) .cursor-ring{width:52px;height:52px;}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.5rem 3.5rem;background:rgba(250,249,246,0.96);backdrop-filter:blur(16px);border-bottom:1px solid var(--warm);}
+.nav-wordmark{font-family:'Libre Baskerville',serif;font-size:1.05rem;letter-spacing:0.02em;color:var(--ink);text-decoration:none;}
+.nav-links{display:flex;align-items:center;gap:2.5rem;}
+.nav-links a{font-family:'DM Mono',monospace;font-size:0.72rem;font-weight:300;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color 0.2s;cursor:none;}
+.nav-links a:hover{color:var(--ink);}
+
+.page-wrap{display:grid;grid-template-columns:1fr 1fr;min-height:100vh;padding-top:4.5rem;}
+
+/* LEFT PANEL */
+.panel-left{background:var(--ink);padding:5rem 4rem;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden;}
+.panel-left::before{content:'';position:absolute;top:-80px;left:-80px;width:400px;height:400px;background:radial-gradient(circle,rgba(184,115,51,0.1),transparent 65%);pointer-events:none;}
+.pl-label{font-family:'DM Mono',monospace;font-size:0.7rem;font-weight:300;letter-spacing:0.2em;text-transform:uppercase;color:var(--copper-l);margin-bottom:1.25rem;display:block;}
+.pl-h1{font-family:'Libre Baskerville',serif;font-size:clamp(2rem,3.2vw,3.5rem);font-weight:700;color:var(--ivory);line-height:1.1;margin-bottom:1.5rem;}
+.pl-h1 em{font-style:italic;color:var(--copper-l);}
+.pl-sub{font-size:0.95rem;font-weight:300;color:rgba(244,240,230,0.6);line-height:1.8;max-width:400px;margin-bottom:3rem;}
+.call-steps{display:flex;flex-direction:column;gap:0;margin-bottom:3rem;}
+.call-step{display:grid;grid-template-columns:2rem 1fr;gap:1rem;align-items:start;padding:1.1rem 0;border-bottom:1px solid rgba(244,240,230,0.08);}
+.call-step:first-child{border-top:1px solid rgba(244,240,230,0.08);}
+.cs-num{font-family:'DM Mono',monospace;font-size:0.68rem;font-weight:300;color:var(--copper-l);letter-spacing:0.05em;padding-top:0.15rem;}
+.cs-text{font-size:0.88rem;font-weight:300;color:rgba(244,240,230,0.65);line-height:1.6;}
+.cs-text strong{color:rgba(244,240,230,0.9);font-weight:500;}
+.cred-bar{display:flex;flex-direction:column;gap:0.6rem;padding-top:2.5rem;border-top:1px solid rgba(244,240,230,0.1);}
+.cred-pill{display:inline-flex;align-items:center;gap:0.6rem;width:fit-content;}
+.cred-dot-sm{width:4px;height:4px;background:var(--copper);border-radius:50%;flex-shrink:0;}
+.cred-pill-text{font-family:'DM Mono',monospace;font-size:0.68rem;font-weight:300;color:rgba(244,240,230,0.4);letter-spacing:0.08em;}
+
+/* RIGHT PANEL */
+.panel-right{background:var(--white);padding:5rem 4rem;display:flex;flex-direction:column;justify-content:center;}
+.form-label-top{font-family:'DM Mono',monospace;font-size:0.68rem;font-weight:300;letter-spacing:0.2em;text-transform:uppercase;color:var(--copper);margin-bottom:1.5rem;display:block;}
+.form-h2{font-family:'Libre Baskerville',serif;font-size:1.8rem;font-weight:700;color:var(--ink);margin-bottom:0.75rem;line-height:1.2;}
+.form-sub{font-size:0.88rem;font-weight:300;color:var(--muted);line-height:1.7;margin-bottom:2.5rem;}
+.form{display:flex;flex-direction:column;gap:1.25rem;}
+.field{display:flex;flex-direction:column;gap:0.4rem;}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;}
+label{font-family:'DM Mono',monospace;font-size:0.65rem;font-weight:300;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);}
+input,select,textarea{font-family:'Outfit',sans-serif;font-size:0.92rem;font-weight:300;color:var(--ink);background:var(--ivory);border:1px solid var(--warm);border-radius:2px;padding:0.85rem 1rem;outline:none;transition:border-color 0.2s,background 0.2s;cursor:none;width:100%;-webkit-appearance:none;}
+input:focus,select:focus,textarea:focus{border-color:var(--copper);background:var(--white);}
+input::placeholder,textarea::placeholder{color:var(--warm);}
+select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%237a7568' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 1rem center;padding-right:2.5rem;}
+select option{color:var(--ink);background:var(--white);}
+textarea{resize:none;min-height:100px;line-height:1.6;}
+.submit-btn{margin-top:0.5rem;display:flex;align-items:center;justify-content:space-between;font-family:'DM Mono',monospace;font-size:0.78rem;font-weight:400;letter-spacing:0.12em;text-transform:uppercase;color:var(--white);background:var(--ink);border:none;padding:1.1rem 1.75rem;border-radius:2px;cursor:none;transition:background 0.2s,transform 0.15s;width:100%;}
+.submit-btn:hover{background:var(--copper);transform:translateY(-1px);}
+.submit-arrow{font-size:1rem;transition:transform 0.2s;}
+.submit-btn:hover .submit-arrow{transform:translateX(4px);}
+.form-note{font-family:'DM Mono',monospace;font-size:0.65rem;font-weight:300;letter-spacing:0.08em;color:var(--warm);text-align:center;margin-top:1rem;}
+
+.success-state{display:none;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:3rem 2rem;}
+.success-state.visible{display:flex;}
+.success-icon{width:64px;height:64px;border:2px solid var(--copper);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 2rem;font-size:1.5rem;color:var(--copper);}
+.success-h{font-family:'Libre Baskerville',serif;font-size:2rem;font-weight:700;color:var(--ink);margin-bottom:1rem;line-height:1.2;}
+.success-h em{font-style:italic;color:var(--copper);}
+.success-p{font-size:0.9rem;font-weight:300;color:var(--muted);line-height:1.8;max-width:360px;margin:0 auto 2.5rem;}
+.success-next{font-family:'DM Mono',monospace;font-size:0.68rem;font-weight:300;letter-spacing:0.12em;text-transform:uppercase;color:var(--copper);text-decoration:none;border-bottom:1px solid rgba(184,115,51,0.3);padding-bottom:0.15rem;transition:color 0.2s;cursor:none;}
+.success-next:hover{color:var(--copper-l);}
+
+@media(max-width:860px){
+  .page-wrap{grid-template-columns:1fr;}
+  .panel-left,.panel-right{padding:4rem 2rem;}
+  nav{padding:1.25rem 2rem;}
+  .field-row{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<nav>
+  <a href="allie-swezey-v2.html" class="nav-wordmark">Allie Swezey</a>
+  <div class="nav-links">
+    <a href="allie-swezey-v2.html">← Back</a>
+    <a href="sample.html">Free sample</a>
+  </div>
+</nav>
+
+<div class="page-wrap">
+  <div class="panel-left">
+    <div>
+      <span class="pl-label">30-minute strategy call</span>
+      <h1 class="pl-h1">Tell her<br>where it's<br><em>breaking.</em></h1>
+      <p class="pl-sub">She comes prepared. She asks the right questions. She tells you honestly whether there is a fit — and if there is, what the path forward looks like. You will know either way by the end of the call.</p>
+    </div>
+    <div>
+      <div class="call-steps">
+        <div class="call-step">
+          <div class="cs-num">01</div>
+          <div class="cs-text"><strong>Share context upfront.</strong> The form is short but real — the more specific you are, the more useful the call.</div>
+        </div>
+        <div class="call-step">
+          <div class="cs-num">02</div>
+          <div class="cs-text"><strong>She responds within one business day</strong> with a time to connect and any pre-read she needs from you.</div>
+        </div>
+        <div class="call-step">
+          <div class="cs-num">03</div>
+          <div class="cs-text"><strong>30 minutes, focused.</strong> Problem diagnosis, honest fit assessment, and a clear next step if there's a match.</div>
+        </div>
+        <div class="call-step">
+          <div class="cs-num">04</div>
+          <div class="cs-text"><strong>If it's a fit,</strong> you'll receive a scoped proposal within 48 hours. Sprint slots are two per month, first-come. Retainers only after a completed sprint.</div>
+        </div>
+      </div>
+      <div class="cred-bar">
+        <div class="cred-pill"><div class="cred-dot-sm"></div><div class="cred-pill-text">Force multiplier for leadership · Halsted Law Group</div></div>
+        <div class="cred-pill"><div class="cred-dot-sm"></div><div class="cred-pill-text">QBO reconciliation, A/R &amp; billing systems expert</div></div>
+        <div class="cred-pill"><div class="cred-dot-sm"></div><div class="cred-pill-text">9 years enterprise sales &amp; ops · SHI International</div></div>
+        <div class="cred-pill"><div class="cred-dot-sm"></div><div class="cred-pill-text">University of Texas at Austin · Austin, TX</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel-right">
+    <div id="formWrap">
+      <span class="form-label-top">Intake form</span>
+      <h2 class="form-h2">Let's see if it's a fit.</h2>
+      <p class="form-sub">Whether you are a founder who needs rigorous strategy, or a firm where operations and financials have gotten ahead of your systems — two sprint slots open per month. Allie reads every submission personally.</p>
+      <div class="form">
+        <div class="field-row">
+          <div class="field">
+            <label for="fname">First name</label>
+            <input type="text" id="fname" placeholder="Jane" autocomplete="given-name">
+          </div>
+          <div class="field">
+            <label for="lname">Last name</label>
+            <input type="text" id="lname" placeholder="Smith" autocomplete="family-name">
+          </div>
+        </div>
+        <div class="field">
+          <label for="email">Email address</label>
+          <input type="email" id="email" placeholder="jane@company.com" autocomplete="email">
+        </div>
+        <div class="field">
+          <label for="company">Company / firm name</label>
+          <input type="text" id="company" placeholder="Acme Co.">
+        </div>
+        <div class="field">
+          <label for="stage">What describes you best?</label>
+          <select id="stage">
+            <option value="" disabled selected>Select one</option>
+            <option>Founder — pre-product, need strategy</option>
+            <option>Founder — have product, need investor deck</option>
+            <option>Founder — need operational infrastructure</option>
+            <option>Established firm — ops or systems audit</option>
+            <option>Established firm — financial systems, QBO, or A/R</option>
+            <option>Established firm — cross-functional alignment</option>
+            <option>Other</option>
+          </select>
+          <div style="font-family:'DM Mono',monospace;font-size:0.6rem;font-weight:300;color:var(--muted);letter-spacing:0.08em;margin-top:0.25rem;">QBO users: Allie has deep hands-on experience with reconciliation, invoice management, A/R, and bank statement workflows.</div>
+        </div>
+        <div class="field">
+          <label for="challenge">What's the core challenge? <span style="color:var(--warm);font-size:0.6rem;letter-spacing:0.05em;text-transform:none;">(be specific — this is what she preps for)</span></label>
+          <textarea id="challenge" placeholder="e.g. We're 6 months from a fundraise and our financials aren't investor-ready. We also have no clear GTM story and our unit economics haven't been pressure-tested..."></textarea>
+        </div>
+        <div class="field">
+          <label for="timeline">Timeline / urgency</label>
+          <select id="timeline">
+            <option value="" disabled selected>When do you need to move?</option>
+            <option>ASAP — this is urgent</option>
+            <option>Within the next 2–4 weeks</option>
+            <option>Next 1–2 months</option>
+            <option>Just exploring for now</option>
+          </select>
+        </div>
+        <button class="submit-btn" id="submitBtn" type="button">
+          <span>Submit intake form</span>
+          <span class="submit-arrow">→</span>
+        </button>
+        <p class="form-note">No spam. No CRM blasts. Allie reads every submission personally.</p>
+      </div>
+    </div>
+    <div class="success-state" id="successState">
+      <div class="success-icon">✓</div>
+      <h2 class="success-h">You're in the<br><em>queue.</em></h2>
+      <p class="success-p">Allie will review your intake and respond within one business day with next steps. If there's a fit, you'll have a call scheduled within the week.</p>
+      <a href="sample.html" class="success-next">While you wait — see a free sample deliverable →</a>
+    </div>
+  </div>
+</div>
+
+<script>
+const dot=document.getElementById('cursorDot'),ring=document.getElementById('cursorRing');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;});
+(function anim(){dot.style.left=mx+'px';dot.style.top=my+'px';rx+=(mx-rx)*0.14;ry+=(my-ry)*0.14;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(anim);})();
+document.getElementById('submitBtn').addEventListener('click',()=>{
+  const fname=document.getElementById('fname').value.trim();
+  const email=document.getElementById('email').value.trim();
+  const stage=document.getElementById('stage').value;
+  const challenge=document.getElementById('challenge').value.trim();
+  const fields=[{el:document.getElementById('fname'),val:fname},{el:document.getElementById('email'),val:email},{el:document.getElementById('stage'),val:stage},{el:document.getElementById('challenge'),val:challenge}];
+  let valid=true;
+  fields.forEach(f=>{f.el.style.borderColor=!f.val?'#c0392b':'var(--warm)';if(!f.val)valid=false;});
+  if(!valid)return;
+  document.getElementById('formWrap').style.display='none';
+  document.getElementById('successState').classList.add('visible');
+});
+['fname','email','company','stage','challenge','timeline'].forEach(id=>{const el=document.getElementById(id);if(el)el.addEventListener('input',()=>el.style.borderColor='var(--warm)');});
+</script>
+</body>
+</html>

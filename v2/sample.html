@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Free Sample Deliverable — Allie Swezey</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Mono:wght@300;400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1a1a18;--ink2:#2e2e2b;--copper:#b87333;--copper-l:#d4916a;--ivory:#f4f0e6;--ivory2:#ede8d8;--warm:#ddd7c4;--muted:#7a7568;--white:#faf9f6;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Outfit',sans-serif;background:var(--ivory);color:var(--ink);overflow-x:hidden;cursor:none;}
+.cursor-dot{width:8px;height:8px;background:var(--copper);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);}
+.cursor-ring{width:32px;height:32px;border:1px solid rgba(184,115,51,0.5);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:transform 0.18s ease,width 0.2s,height 0.2s;}
+body:has(a:hover) .cursor-ring,body:has(button:hover) .cursor-ring{width:52px;height:52px;}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.5rem 3.5rem;background:rgba(250,249,246,0.96);backdrop-filter:blur(16px);border-bottom:1px solid var(--warm);}
+.nav-wordmark{font-family:'Libre Baskerville',serif;font-size:1.05rem;letter-spacing:0.02em;color:var(--ink);text-decoration:none;}
+.nav-links{display:flex;align-items:center;gap:2.5rem;}
+.nav-links a{font-family:'DM Mono',monospace;font-size:0.72rem;font-weight:300;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color 0.2s;cursor:none;}
+.nav-links a:hover{color:var(--ink);}
+.sample-hero{background:var(--ink);padding:10rem 3.5rem 6rem;position:relative;overflow:hidden;}
+.sample-hero::before{content:'';position:absolute;top:-60px;right:-60px;width:500px;height:500px;background:radial-gradient(circle,rgba(184,115,51,0.09),transparent 60%);pointer-events:none;}
+.sample-hero::after{content:'SAMPLE';position:absolute;right:-2rem;top:50%;transform:translateY(-50%) rotate(90deg);font-family:'Libre Baskerville',serif;font-size:10rem;font-weight:700;color:rgba(255,255,255,0.025);letter-spacing:0.05em;white-space:nowrap;pointer-events:none;user-select:none;}
+.hero-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center;position:relative;z-index:1;}
+.hi-label{font-family:'DM Mono',monospace;font-size:0.7rem;font-weight:300;letter-spacing:0.2em;text-transform:uppercase;color:var(--copper-l);margin-bottom:1.25rem;display:block;}
+.hi-h1{font-family:'Libre Baskerville',serif;font-size:clamp(2.2rem,3.5vw,4rem);font-weight:700;color:var(--ivory);line-height:1.1;margin-bottom:1.5rem;}
+.hi-h1 em{font-style:italic;color:var(--copper-l);}
+.hi-sub{font-size:0.95rem;font-weight:300;color:rgba(244,240,230,0.6);line-height:1.8;margin-bottom:2.5rem;}
+.hi-btn{display:inline-flex;align-items:center;gap:0.6rem;font-family:'DM Mono',monospace;font-size:0.78rem;font-weight:400;letter-spacing:0.12em;text-transform:uppercase;text-decoration:none;color:var(--ink);background:var(--copper-l);padding:0.95rem 2rem;border-radius:2px;transition:background 0.2s,transform 0.15s;cursor:none;}
+.hi-btn:hover{background:var(--copper);transform:translateY(-1px);}
+.included-box{background:rgba(244,240,230,0.05);border:1px solid rgba(244,240,230,0.1);padding:2.5rem;}
+.ib-label{font-family:'DM Mono',monospace;font-size:0.65rem;font-weight:300;letter-spacing:0.2em;text-transform:uppercase;color:var(--copper-l);margin-bottom:1.5rem;display:block;}
+.ib-items{display:flex;flex-direction:column;gap:0;}
+.ib-item{display:flex;align-items:flex-start;gap:1rem;padding:1rem 0;border-bottom:1px solid rgba(244,240,230,0.08);}
+.ib-item:first-child{border-top:1px solid rgba(244,240,230,0.08);}
+.ib-check{width:20px;height:20px;border:1px solid var(--copper);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:0.1rem;}
+.ib-check::after{content:'';width:6px;height:6px;background:var(--copper);border-radius:50%;}
+.ib-text{font-size:0.9rem;font-weight:300;color:rgba(244,240,230,0.7);line-height:1.5;}
+.ib-text strong{color:rgba(244,240,230,0.9);font-weight:500;}
+.preview-wrap{max-width:1200px;margin:0 auto;padding:7rem 3.5rem;}
+.preview-header{margin-bottom:4rem;}
+.label{font-family:'DM Mono',monospace;font-size:0.68rem;font-weight:300;letter-spacing:0.22em;text-transform:uppercase;color:var(--copper);margin-bottom:1.25rem;display:block;}
+.section-h2{font-family:'Libre Baskerville',serif;font-size:clamp(2rem,3.5vw,3rem);font-weight:700;line-height:1.12;color:var(--ink);}
+.section-h2 em{font-style:italic;color:var(--copper);}
+.preview-sub{font-size:0.95rem;font-weight:300;color:var(--muted);line-height:1.8;margin-top:1rem;max-width:600px;}
+.preview-tabs{display:flex;gap:0;border-bottom:2px solid var(--warm);margin-bottom:3rem;}
+.ptab{font-family:'DM Mono',monospace;font-size:0.72rem;font-weight:300;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);padding:0.9rem 1.75rem;border:none;background:transparent;cursor:none;border-bottom:2px solid transparent;margin-bottom:-2px;transition:color 0.2s;}
+.ptab:hover{color:var(--ink);}
+.ptab.active{color:var(--copper);border-bottom-color:var(--copper);}
+.doc-panel{display:none;}
+.doc-panel.active{display:block;}
+.mock-doc{background:var(--white);border:1px solid var(--warm);border-radius:2px;overflow:hidden;position:relative;}
+.mock-doc::after{content:'';position:absolute;bottom:0;left:0;right:0;height:200px;background:linear-gradient(to bottom,transparent,var(--white) 70%);pointer-events:none;z-index:2;}
+.doc-chrome{background:var(--ink2);padding:0.75rem 1.25rem;display:flex;align-items:center;gap:0.6rem;}
+.doc-dot{width:10px;height:10px;border-radius:50%;}
+.doc-title{font-family:'DM Mono',monospace;font-size:0.68rem;font-weight:300;letter-spacing:0.1em;color:rgba(244,240,230,0.4);margin-left:0.75rem;}
+.bp-body{padding:3rem 3.5rem;}
+.bp-letterhead{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:3rem;padding-bottom:1.5rem;border-bottom:2px solid var(--ink);}
+.bp-lh-name{font-family:'Libre Baskerville',serif;font-size:0.85rem;font-weight:700;color:var(--ink);letter-spacing:0.05em;}
+.bp-lh-title{font-family:'DM Mono',monospace;font-size:0.62rem;font-weight:300;color:var(--muted);letter-spacing:0.12em;text-transform:uppercase;margin-top:0.2rem;}
+.bp-lh-date{font-family:'DM Mono',monospace;font-size:0.62rem;font-weight:300;color:var(--muted);letter-spacing:0.08em;}
+.bp-doc-title{font-family:'Libre Baskerville',serif;font-size:2rem;font-weight:700;color:var(--ink);margin-bottom:0.5rem;}
+.bp-doc-sub{font-family:'DM Mono',monospace;font-size:0.7rem;font-weight:300;color:var(--copper);letter-spacing:0.15em;text-transform:uppercase;margin-bottom:2.5rem;}
+.bp-section-label{font-family:'DM Mono',monospace;font-size:0.65rem;font-weight:400;letter-spacing:0.2em;text-transform:uppercase;color:var(--copper);margin-bottom:0.75rem;margin-top:2rem;}
+.bp-section-h{font-family:'Libre Baskerville',serif;font-size:1.2rem;font-weight:700;color:var(--ink);margin-bottom:0.75rem;}
+.bp-p{font-size:0.88rem;font-weight:300;color:var(--muted);line-height:1.8;margin-bottom:1rem;}
+.bp-bullet{font-size:0.88rem;font-weight:300;color:var(--ink2);line-height:1.8;padding-left:1.5rem;position:relative;margin-bottom:0.4rem;}
+.bp-bullet::before{content:'--';position:absolute;left:0;color:var(--copper);font-family:'DM Mono',monospace;}
+.bp-stat-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.5rem;margin:1.5rem 0;}
+.bp-stat{border:1px solid var(--warm);padding:1rem 1.25rem;}
+.bp-stat-n{font-family:'Libre Baskerville',serif;font-size:1.6rem;font-weight:700;color:var(--ink);}
+.bp-stat-l{font-size:0.75rem;font-weight:300;color:var(--muted);margin-top:0.2rem;}
+.rt-body{padding:3rem 3.5rem;}
+.rt-header{margin-bottom:2.5rem;padding-bottom:1.5rem;border-bottom:3px solid #c0392b;}
+.rt-label-top{font-family:'DM Mono',monospace;font-size:0.62rem;font-weight:400;letter-spacing:0.2em;text-transform:uppercase;color:#c0392b;margin-bottom:0.5rem;}
+.rt-title{font-family:'Libre Baskerville',serif;font-size:1.8rem;font-weight:700;color:var(--ink);}
+.rt-meta{font-family:'DM Mono',monospace;font-size:0.65rem;font-weight:300;color:var(--muted);letter-spacing:0.08em;margin-top:0.5rem;}
+.rt-verdict{background:#fdf2f0;border:1px solid #e8c4bc;border-left:4px solid #c0392b;padding:1.25rem 1.5rem;margin-bottom:2rem;}
+.rt-verdict-label{font-family:'DM Mono',monospace;font-size:0.62rem;font-weight:400;letter-spacing:0.15em;text-transform:uppercase;color:#c0392b;margin-bottom:0.4rem;}
+.rt-verdict-text{font-size:0.88rem;font-weight:400;color:var(--ink2);line-height:1.7;}
+.rt-risk-item{margin-bottom:1.75rem;}
+.rt-risk-header{display:flex;align-items:center;gap:0.75rem;margin-bottom:0.6rem;}
+.rt-severity{font-family:'DM Mono',monospace;font-size:0.6rem;font-weight:400;letter-spacing:0.1em;text-transform:uppercase;padding:0.2rem 0.6rem;border-radius:2px;}
+.sev-high{background:#fde8e5;color:#c0392b;}
+.sev-med{background:#fef3e2;color:#d4821a;}
+.rt-risk-title{font-size:0.92rem;font-weight:600;color:var(--ink);}
+.rt-risk-body{font-size:0.85rem;font-weight:300;color:var(--muted);line-height:1.7;}
+.rt-risk-mit{font-size:0.82rem;font-weight:300;color:var(--ink2);line-height:1.7;margin-top:0.5rem;padding-left:1rem;border-left:2px solid var(--warm);}
+.rt-risk-mit strong{color:var(--copper);font-weight:500;}
+.deck-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--warm);}
+.deck-slide{padding:2rem;border-right:1px solid var(--warm);border-bottom:1px solid var(--warm);min-height:180px;display:flex;flex-direction:column;justify-content:space-between;}
+.deck-slide:nth-child(2n){border-right:none;}
+.slide-num{font-family:'DM Mono',monospace;font-size:0.6rem;font-weight:300;color:var(--warm);letter-spacing:0.1em;margin-bottom:0.75rem;}
+.slide-title{font-family:'Libre Baskerville',serif;font-size:1rem;font-weight:700;color:var(--ink);margin-bottom:0.5rem;}
+.slide-body{font-size:0.78rem;font-weight:300;color:var(--muted);line-height:1.6;}
+.deck-slide.dark{background:var(--ink);}
+.deck-slide.dark .slide-title{color:var(--ivory);}
+.deck-slide.dark .slide-body{color:rgba(244,240,230,0.5);}
+.deck-slide.dark .slide-num{color:rgba(244,240,230,0.2);}
+.deck-slide.accent{background:var(--copper);border-color:var(--copper-l);}
+.deck-slide.accent .slide-title,.deck-slide.accent .slide-body{color:rgba(255,255,255,0.9);}
+.deck-slide.accent .slide-num{color:rgba(255,255,255,0.5);}
+.slide-bar{height:3px;background:var(--copper);width:30%;border-radius:1px;}
+.deck-slide.dark .slide-bar{background:var(--copper-l);}
+.gate-wrap{background:var(--ink2);border-top:3px solid var(--copper);padding:5rem 3.5rem;position:relative;overflow:hidden;}
+.gate-wrap::before{content:'';position:absolute;bottom:-80px;right:-80px;width:400px;height:400px;background:radial-gradient(circle,rgba(184,115,51,0.12),transparent 65%);pointer-events:none;}
+.gate-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center;position:relative;z-index:1;}
+.gate-label{font-family:'DM Mono',monospace;font-size:0.7rem;font-weight:300;letter-spacing:0.2em;text-transform:uppercase;color:var(--copper-l);margin-bottom:1.25rem;display:block;}
+.gate-h{font-family:'Libre Baskerville',serif;font-size:clamp(2rem,3vw,3rem);font-weight:700;color:var(--ivory);line-height:1.15;}
+.gate-h em{font-style:italic;color:var(--copper-l);}
+.gate-p{font-size:0.9rem;font-weight:300;color:rgba(244,240,230,0.55);line-height:1.8;margin-top:1.25rem;}
+.gate-form{display:flex;flex-direction:column;gap:1rem;}
+.gate-form input{font-family:'Outfit',sans-serif;font-size:0.92rem;font-weight:300;color:var(--ivory);background:rgba(244,240,230,0.08);border:1px solid rgba(244,240,230,0.15);border-radius:2px;padding:0.9rem 1.1rem;outline:none;transition:border-color 0.2s,background 0.2s;cursor:none;width:100%;-webkit-appearance:none;}
+.gate-form input:focus{border-color:var(--copper-l);background:rgba(244,240,230,0.12);}
+.gate-form input::placeholder{color:rgba(244,240,230,0.25);}
+.gate-submit{display:flex;align-items:center;justify-content:space-between;font-family:'DM Mono',monospace;font-size:0.78rem;font-weight:400;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink);background:var(--copper-l);border:none;padding:1.05rem 1.75rem;border-radius:2px;cursor:none;transition:background 0.2s,transform 0.15s;width:100%;}
+.gate-submit:hover{background:var(--copper);transform:translateY(-1px);}
+.gate-arrow{font-size:1rem;transition:transform 0.2s;}
+.gate-submit:hover .gate-arrow{transform:translateX(4px);}
+.gate-note{font-family:'DM Mono',monospace;font-size:0.62rem;font-weight:300;letter-spacing:0.08em;color:rgba(244,240,230,0.25);text-align:center;}
+.gate-success{display:none;flex-direction:column;align-items:center;text-align:center;padding:2rem;}
+.gate-success.visible{display:flex;}
+.gs-icon{width:56px;height:56px;border:2px solid var(--copper-l);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;font-size:1.3rem;color:var(--copper-l);}
+.gs-h{font-family:'Libre Baskerville',serif;font-size:1.6rem;font-weight:700;color:var(--ivory);line-height:1.2;margin-bottom:0.75rem;}
+.gs-h em{font-style:italic;color:var(--copper-l);}
+.gs-p{font-size:0.88rem;font-weight:300;color:rgba(244,240,230,0.55);line-height:1.7;margin-bottom:2rem;max-width:320px;}
+.gs-cta{display:inline-flex;align-items:center;gap:0.5rem;font-family:'DM Mono',monospace;font-size:0.72rem;font-weight:300;letter-spacing:0.12em;text-transform:uppercase;color:var(--copper-l);text-decoration:none;border-bottom:1px solid rgba(212,145,106,0.3);padding-bottom:0.15rem;transition:color 0.2s;cursor:none;}
+.gs-cta:hover{color:var(--copper);}
+footer{background:var(--ink);padding:2rem 3.5rem;display:flex;align-items:center;justify-content:space-between;}
+.footer-l,.footer-r{font-family:'DM Mono',monospace;font-size:0.68rem;font-weight:300;color:rgba(244,240,230,0.3);letter-spacing:0.1em;}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity 0.7s ease,transform 0.7s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+.reveal-delay-2{transition-delay:0.2s;}
+@media(max-width:860px){
+  .hero-inner,.gate-inner{grid-template-columns:1fr;gap:3rem;}
+  .sample-hero{padding:8rem 2rem 4rem;}
+  .preview-wrap{padding:4rem 2rem;}
+  .gate-wrap{padding:4rem 2rem;}
+  nav{padding:1.25rem 2rem;}
+  .deck-grid{grid-template-columns:1fr;}
+  .deck-slide:nth-child(2n){border-right:1px solid var(--warm);}
+  footer{flex-direction:column;gap:0.5rem;text-align:center;}
+  .bp-stat-row{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+<nav>
+  <a href="allie-swezey-v2.html" class="nav-wordmark">Allie Swezey</a>
+  <div class="nav-links">
+    <a href="allie-swezey-v2.html">Back to site</a>
+    <a href="contact.html">Book a call</a>
+  </div>
+</nav>
+
+<div class="sample-hero">
+  <div class="hero-inner">
+    <div>
+      <span class="hi-label">Free sample deliverable</span>
+      <h1 class="hi-h1">Real output.<br>Before you<br><em>decide.</em></h1>
+      <p class="hi-sub">Every engagement produces real, professional documents you can use immediately — not summary slides or bullet point frameworks. Here is what they look like. No form required to preview; submit your email below for the full package.</p>
+      <a href="#gate" class="hi-btn">Get the full sample</a>
+    </div>
+    <div class="included-box">
+      <span class="ib-label">What is included</span>
+      <div class="ib-items">
+        <div class="ib-item"><div class="ib-check"></div><div class="ib-text"><strong>12-page business plan</strong> — structured like a real investor document. Problem definition, market sizing, unit economics, GTM strategy, competitive positioning, and financial model.</div></div>
+        <div class="ib-item"><div class="ib-check"></div><div class="ib-text"><strong>Red team memo</strong> — a VC-style adversarial critique. Six specific risks with severity ratings and written mitigations for each. This is the document that saves founders from building the wrong thing.</div></div>
+        <div class="ib-item"><div class="ib-check"></div><div class="ib-text"><strong>10-slide pitch deck</strong> — investor-ready narrative arc from problem through ask, with annotated structure notes so you understand the reasoning behind every slide.</div></div>
+        <div class="ib-item"><div class="ib-check"></div><div class="ib-text"><strong>Engagement overview</strong> covering scope, timeline, revision process, and package comparison</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="preview-wrap">
+  <div class="preview-header reveal">
+    <span class="label">Document previews</span>
+    <h2 class="section-h2">What the <em>deliverables</em> look like.</h2>
+    <p class="preview-sub">Each tab below shows a real preview — not a mockup shell. The full documents unlock when you submit your email below.</p>
+  </div>
+  <div class="preview-tabs reveal">
+    <button class="ptab active" data-tab="bp">Business Plan</button>
+    <button class="ptab" data-tab="rt">Red Team Memo</button>
+    <button class="ptab" data-tab="deck">Pitch Deck</button>
+  </div>
+
+  <div class="doc-panel active reveal" id="tab-bp">
+    <div class="mock-doc">
+      <div class="doc-chrome">
+        <div class="doc-dot" style="background:#ff5f57;"></div>
+        <div class="doc-dot" style="background:#febc2e;margin-left:6px;"></div>
+        <div class="doc-dot" style="background:#28c840;margin-left:6px;"></div>
+        <div class="doc-title">Business Plan -- Confidential Draft -- Allie Swezey Strategic Consulting</div>
+      </div>
+      <div class="bp-body">
+        <div class="bp-letterhead">
+          <div><div class="bp-lh-name">Allie Swezey</div><div class="bp-lh-title">Strategic Consulting -- hello@allieswezey.com</div></div>
+          <div style="text-align:right;"><div class="bp-lh-date">Prepared: Q1 2026 -- Confidential</div></div>
+        </div>
+        <div class="bp-doc-title">Business Plan</div>
+        <div class="bp-doc-sub">Sample Client -- Series A Readiness Sprint</div>
+        <div class="bp-section-label">01 -- Executive Summary</div>
+        <div class="bp-section-h">Mission and Strategic Framing</div>
+        <div class="bp-p">[Client] is a B2B SaaS platform that automates compliance documentation for mid-market financial services firms. The company operates at the intersection of regulatory pressure, workflow inefficiency, and an underserved market segment that has historically been priced out of enterprise-grade compliance tooling.</div>
+        <div class="bp-p">The strategic case for investment rests on three converging factors: accelerating regulatory complexity driving mandatory spend, a fragmented competitive landscape with no dominant mid-market incumbent, and a founding team with direct credentialing in both the regulatory domain and technical implementation.</div>
+        <div class="bp-stat-row">
+          <div class="bp-stat"><div class="bp-stat-n">$4.2B</div><div class="bp-stat-l">Serviceable market (US mid-market)</div></div>
+          <div class="bp-stat"><div class="bp-stat-n">23%</div><div class="bp-stat-l">YoY regulatory burden growth</div></div>
+          <div class="bp-stat"><div class="bp-stat-n">$3,400</div><div class="bp-stat-l">Average monthly contract value</div></div>
+        </div>
+        <div class="bp-section-label">02 -- Problem Definition</div>
+        <div class="bp-section-h">The Gap in the Market</div>
+        <div class="bp-p">Mid-market financial services firms (50-500 employees) face the same compliance requirements as enterprise firms but lack the headcount, tooling, or budget to manage documentation at scale. Current options force an uncomfortable choice:</div>
+        <div class="bp-bullet">Enterprise platforms priced at $100K+ annually -- inaccessible for this segment</div>
+        <div class="bp-bullet">Manual processes managed by compliance officers spending 60%+ of time on documentation</div>
+        <div class="bp-bullet">Consultants and legal fees that are expensive, inconsistent, and non-transferable</div>
+        <div class="bp-p">The result: an estimated 18,000 firms in the US that are perpetually under-compliant, over-burdened, and exposed to regulatory risk they cannot quantify.</div>
+        <div class="bp-section-label">03 -- Solution Overview</div>
+        <div class="bp-section-h">Core Product Architecture</div>
+        <div class="bp-p">The platform automates the creation, version control, and audit trail of compliance documentation through three interconnected modules — with content that adapts in real-time as regulatory frameworks are updated.</div>
+        <div class="bp-p" style="font-style:italic;color:var(--copper);font-size:0.8rem;border-top:1px solid var(--warm);padding-top:0.75rem;margin-top:1.25rem;">Full document continues: competitive landscape, team bios, 12-month financial model, GTM phasing, unit economics, and funding use of proceeds. Unlock below.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="doc-panel" id="tab-rt">
+    <div class="mock-doc">
+      <div class="doc-chrome">
+        <div class="doc-dot" style="background:#ff5f57;"></div>
+        <div class="doc-dot" style="background:#febc2e;margin-left:6px;"></div>
+        <div class="doc-dot" style="background:#28c840;margin-left:6px;"></div>
+        <div class="doc-title">Red Team Memo -- VC Critique -- Allie Swezey Strategic Consulting</div>
+      </div>
+      <div class="rt-body">
+        <div class="rt-header">
+          <div class="rt-label-top">Adversarial Review -- Confidential</div>
+          <div class="rt-title">Red Team Analysis: [Client]</div>
+          <div class="rt-meta">Prepared by Allie Swezey -- Series A Readiness Sprint -- Q1 2026</div>
+        </div>
+        <div class="rt-verdict">
+          <div class="rt-verdict-label">Overall Verdict</div>
+          <div class="rt-verdict-text">The core thesis is credible. The market framing is sound. However, the plan as written would not survive a prepared investor's first 15 minutes. Three structural risks require direct mitigation before this document is meeting-ready. The good news: all three are solvable. The revisions are specific and achievable within the sprint scope.</div>
+        </div>
+        <div class="rt-risk-item">
+          <div class="rt-risk-header"><span class="rt-severity sev-high">High</span><div class="rt-risk-title">Commoditization Risk: AI-powered compliance is attracting serious capital</div></div>
+          <div class="rt-risk-body">Three well-funded startups are building in adjacent spaces with significantly more runway. The plan's competitive differentiation relies on domain expertise and configurability -- both arguments that are difficult to defend at scale if a well-capitalized competitor commoditizes the base product.</div>
+          <div class="rt-risk-mit"><strong>Mitigation:</strong> Sharpen the ICP to one highly-specific regulatory sub-domain where the team has direct credentialing. Investors fund moats, not feature parity.</div>
+        </div>
+        <div class="rt-risk-item">
+          <div class="rt-risk-header"><span class="rt-severity sev-high">High</span><div class="rt-risk-title">Sales Motion Complexity: Mid-market compliance buyers are notoriously slow</div></div>
+          <div class="rt-risk-body">The GTM assumes a 45-day sales cycle. Compliance software sold to risk officers at mid-market financial firms regularly runs 90-180 days and requires CCO-level champion identification. The financial model's unit economics depend on sales velocity that does not reflect actual buyer behavior...</div>
+        </div>
+        <div class="rt-risk-item">
+          <div class="rt-risk-header"><span class="rt-severity sev-med">Medium</span><div class="rt-risk-title">Regulatory Moat Durability: The advantage may be timing-dependent</div></div>
+          <div class="rt-risk-body">The platform's core value is speed-to-compliance as regulations change. This advantage is real today but assumes regulatory frameworks update faster than competitors can respond...</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="doc-panel" id="tab-deck">
+    <div class="mock-doc">
+      <div class="doc-chrome">
+        <div class="doc-dot" style="background:#ff5f57;"></div>
+        <div class="doc-dot" style="background:#febc2e;margin-left:6px;"></div>
+        <div class="doc-dot" style="background:#28c840;margin-left:6px;"></div>
+        <div class="doc-title">Pitch Deck -- 10 Slides -- Allie Swezey Strategic Consulting</div>
+      </div>
+      <div style="padding:2rem;">
+        <div class="deck-grid">
+          <div class="deck-slide dark">
+            <div><div class="slide-num">01 / Cover</div><div class="slide-title">[Client]</div><div class="slide-body">Compliance infrastructure for the mid-market. Series A -- Q1 2026.</div></div>
+            <div class="slide-bar"></div>
+          </div>
+          <div class="deck-slide">
+            <div><div class="slide-num">02 / Problem</div><div class="slide-title">18,000 firms. Zero good options.</div><div class="slide-body">Mid-market firms face enterprise compliance requirements with startup-level resources. The gap is widening.</div></div>
+            <div class="slide-bar" style="background:var(--copper);"></div>
+          </div>
+          <div class="deck-slide">
+            <div><div class="slide-num">03 / Solution</div><div class="slide-title">Compliance documentation, automated.</div><div class="slide-body">Three modules. Real-time regulatory sync. Audit trail built in. Deploys in days, not quarters.</div></div>
+            <div class="slide-bar" style="background:var(--copper);"></div>
+          </div>
+          <div class="deck-slide dark">
+            <div><div class="slide-num">04 / Market</div><div class="slide-title">$4.2B serviceable. 23% annual growth.</div><div class="slide-body">Driven by regulatory expansion, not product hype. This spend is mandatory.</div></div>
+            <div class="slide-bar"></div>
+          </div>
+          <div class="deck-slide accent">
+            <div><div class="slide-num">05 / Traction</div><div class="slide-title">12 design partners. $340K ARR. 0% churn.</div><div class="slide-body">All from direct outreach. No marketing spend. Proof of pull before we scale acquisition.</div></div>
+          </div>
+          <div class="deck-slide">
+            <div><div class="slide-num">06 / Business Model</div><div class="slide-title">$3,400 MCV. 85% gross margin.</div><div class="slide-body">Annual contracts, monthly billing. LTV:CAC of 9:1 at current motion. Path to 11:1 with PLG layer.</div></div>
+            <div class="slide-bar" style="background:var(--copper);"></div>
+          </div>
+        </div>
+        <div style="padding:1.25rem 0;font-family:'DM Mono',monospace;font-size:0.65rem;color:var(--warm);text-align:center;letter-spacing:0.1em;">SLIDES 7-10 IN FULL SAMPLE -- COMPETITIVE LANDSCAPE · TEAM · FINANCIAL MODEL · FUNDING ASK</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="gate-wrap" id="gate">
+  <div class="gate-inner">
+    <div class="reveal">
+      <span class="gate-label">Get the full sample</span>
+      <h2 class="gate-h">The complete package,<br><em>free.</em></h2>
+      <p class="gate-p">Full 12-page business plan, complete red team memo with all six risk items and mitigations, all 10 pitch deck slides with structure notes, and a one-page engagement overview. Sent to your inbox — usually within a few hours.</p>
+    </div>
+    <div class="reveal reveal-delay-2">
+      <div id="gateFormWrap">
+        <div class="gate-form">
+          <input type="text" id="gfname" placeholder="First name">
+          <input type="email" id="gfemail" placeholder="Email address">
+          <button class="gate-submit" id="gateSubmit" type="button">
+            <span>Send me the sample</span>
+            <span class="gate-arrow">&#8594;</span>
+          </button>
+          <p class="gate-note">No spam. Allie sends it herself. Usually within a few hours.</p>
+        </div>
+      </div>
+      <div class="gate-success" id="gateSuccess">
+        <div class="gs-icon">&#10003;</div>
+        <h3 class="gs-h">On its <em>way.</em></h3>
+        <p class="gs-p">Check your inbox. The full sample package is on its way -- usually arrives within a few hours.</p>
+        <a href="contact.html" class="gs-cta">Ready to talk? Book a strategy call &#8594;</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-l">&#169; 2026 Allie Swezey -- hello@allieswezey.com -- Austin, TX</div>
+  <div class="footer-r">Prototype v2 -- Noindex -- No tracking</div>
+</footer>
+
+<script>
+const dot=document.getElementById('cursorDot'),ring=document.getElementById('cursorRing');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;});
+(function anim(){dot.style.left=mx+'px';dot.style.top=my+'px';rx+=(mx-rx)*0.14;ry+=(my-ry)*0.14;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(anim);})();
+document.querySelectorAll('.ptab').forEach(tab=>{
+  tab.addEventListener('click',()=>{
+    document.querySelectorAll('.ptab').forEach(t=>t.classList.remove('active'));
+    document.querySelectorAll('.doc-panel').forEach(p=>p.classList.remove('active'));
+    tab.classList.add('active');
+    document.getElementById('tab-'+tab.dataset.tab).classList.add('active');
+  });
+});
+document.getElementById('gateSubmit').addEventListener('click',()=>{
+  const name=document.getElementById('gfname').value.trim();
+  const email=document.getElementById('gfemail').value.trim();
+  if(!name){document.getElementById('gfname').style.borderColor='#c0392b';return;}
+  if(!email||!email.includes('@')){document.getElementById('gfemail').style.borderColor='#c0392b';return;}
+  document.getElementById('gateFormWrap').style.display='none';
+  document.getElementById('gateSuccess').classList.add('visible');
+});
+['gfname','gfemail'].forEach(id=>{const el=document.getElementById(id);if(el)el.addEventListener('input',()=>el.style.borderColor='rgba(244,240,230,0.15)');});
+const revEls=document.querySelectorAll('.reveal');
+const io=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}});},{threshold:0.12});
+revEls.forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
