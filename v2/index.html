@@ -1,279 +1,1173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="noindex, nofollow">
-  <title>Allie Swezey — Operator for Teams in Transition</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --ink: #0d1d2a;
-      --ink-light: #1f3647;
-      --sand: #f5f0e8;
-      --stone: #d9d1c4;
-      --accent: #caa552;
-      --accent-dark: #a78531;
-      --mist: #6f7d87;
-      --white: #ffffff;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: 'Space Grotesk', sans-serif;
-      background: var(--sand);
-      color: var(--ink);
-      line-height: 1.6;
-    }
-    h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
-    a { text-decoration: none; color: inherit; }
-    .page { max-width: 1180px; margin: 0 auto; padding: 0 2rem 5rem; }
-    nav { display: flex; justify-content: space-between; align-items: center; padding: 1.75rem 0; position: sticky; top: 0; background: var(--sand); z-index: 10; }
-    nav a { font-size: 0.85rem; letter-spacing: 0.08em; color: var(--mist); margin-left: 1.5rem; text-transform: uppercase; }
-    .btn { display: inline-flex; align-items: center; gap: 0.4rem; text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.8rem; padding: 0.9rem 1.6rem; border-radius: 999px; border: 1px solid transparent; transition: all 0.2s ease; }
-    .btn-primary { background: var(--ink); color: var(--sand); }
-    .btn-primary:hover { background: var(--accent-dark); }
-    .btn-secondary { border-color: var(--ink); color: var(--ink); }
-    .hero { background: var(--ink); color: var(--sand); border-radius: 32px; padding: 4rem; margin-bottom: 3rem; position: relative; overflow: hidden; }
-    .hero::after { content: ""; position: absolute; top: -40px; right: -40px; width: 220px; height: 220px; background: radial-gradient(circle, rgba(202,165,82,0.4), transparent); }
-    .hero h1 { font-size: clamp(2.6rem, 4vw, 4.4rem); line-height: 1.1; margin-bottom: 1.5rem; }
-    .hero p { max-width: 620px; color: rgba(245,240,232,0.85); margin-bottom: 2rem; }
-    .hero-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(180px,1fr)); gap: 1rem; }
-    .metric { background: rgba(255,255,255,0.08); padding: 1.2rem; border-radius: 18px; border: 1px solid rgba(255,255,255,0.1); }
-    .metric strong { display: block; font-size: 2rem; }
-    section { margin-top: 4rem; }
-    .section-header { margin-bottom: 1.5rem; }
-    .section-header p { color: var(--mist); letter-spacing: 0.1em; font-size: 0.8rem; text-transform: uppercase; }
-    .card-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap: 1.5rem; }
-    .card { background: var(--white); border-radius: 18px; padding: 1.75rem; border: 1px solid var(--stone); }
-    .timeline { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 1.5rem; }
-    .timeline-step { background: var(--white); border-left: 4px solid var(--accent); padding: 1.5rem; border-radius: 12px; }
-    .services { border-radius: 24px; background: var(--ink); color: var(--sand); padding: 3rem; }
-    .services-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 1.2rem; margin-top: 2rem; }
-    .service-card { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: 16px; padding: 1.5rem; }
-    .service-card.featured { background: var(--accent); color: var(--ink); }
-    .service-card ul { margin-top: 1rem; padding-left: 1rem; font-size: 0.95rem; }
-    blockquote { background: var(--white); border-left: 4px solid var(--accent); padding: 1.5rem; margin-top: 1rem; border-radius: 12px; font-style: italic; }
-    .ideal-list { columns: 2; column-gap: 2rem; }
-    footer { margin-top: 4rem; padding: 3rem 0; text-align: center; color: var(--mist); font-size: 0.85rem; }
-    @media (max-width: 720px) {
-      .hero { padding: 2.5rem; }
-      nav { flex-direction: column; gap: 1rem; }
-      .ideal-list { columns: 1; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Allie Swezey — Strategic Operator</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Mono:wght@300;400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --ink:     #1a1a18;
+  --ink2:    #2e2e2b;
+  --copper:  #b87333;
+  --copper-l:#d4916a;
+  --ivory:   #f4f0e6;
+  --ivory2:  #ede8d8;
+  --warm:    #ddd7c4;
+  --muted:   #7a7568;
+  --white:   #faf9f6;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background: var(--ivory);
+  color: var(--ink);
+  overflow-x: hidden;
+  cursor: none;
+}
+
+/* ── Custom cursor ────────────────────────────────── */
+.cursor-dot {
+  width: 8px; height: 8px;
+  background: var(--copper);
+  border-radius: 50%;
+  position: fixed; top: 0; left: 0;
+  pointer-events: none; z-index: 9999;
+  transform: translate(-50%,-50%);
+  transition: transform 0.08s ease;
+}
+.cursor-ring {
+  width: 32px; height: 32px;
+  border: 1px solid rgba(184,115,51,0.5);
+  border-radius: 50%;
+  position: fixed; top: 0; left: 0;
+  pointer-events: none; z-index: 9998;
+  transform: translate(-50%,-50%);
+  transition: transform 0.18s ease, width 0.2s, height 0.2s;
+}
+body:has(a:hover) .cursor-ring,
+body:has(button:hover) .cursor-ring { width: 52px; height: 52px; }
+
+/* ── NAV ──────────────────────────────────────────── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1.5rem 3.5rem;
+  mix-blend-mode: normal;
+  transition: background 0.3s, border-color 0.3s;
+}
+nav.scrolled {
+  background: rgba(250,249,246,0.95);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--warm);
+}
+.nav-wordmark {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.05rem;
+  letter-spacing: 0.02em;
+  color: var(--ink);
+}
+.nav-links { display: flex; align-items: center; gap: 2.5rem; }
+.nav-links a {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.72rem;
+  font-weight: 300;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--ink); cursor: none; }
+.nav-cta {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.72rem !important;
+  font-weight: 400 !important;
+  color: var(--white) !important;
+  background: var(--ink);
+  padding: 0.6rem 1.4rem;
+  border-radius: 2px;
+  letter-spacing: 0.1em !important;
+  transition: background 0.2s !important;
+}
+.nav-cta:hover { background: var(--copper) !important; }
+
+/* ── HERO ─────────────────────────────────────────── */
+.hero {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 6rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Textured grain overlay */
+.hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  background-size: 180px;
+  pointer-events: none; z-index: 0;
+}
+
+.hero-left {
+  background: var(--ink);
+  padding: 6rem 4rem 5rem;
+  display: flex; flex-direction: column; justify-content: space-between;
+  position: relative; z-index: 1;
+}
+.hero-right {
+  background: var(--ivory);
+  padding: 6rem 4rem 5rem;
+  display: flex; flex-direction: column; justify-content: space-between;
+  position: relative; z-index: 1;
+}
+
+.hero-eyebrow {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.7rem;
+  font-weight: 300;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--copper-l);
+  margin-bottom: 2.5rem;
+}
+
+.hero-h1 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: clamp(2.8rem, 4.5vw, 5.2rem);
+  line-height: 1.08;
+  font-weight: 700;
+  color: var(--ivory);
+  margin-bottom: 2.5rem;
+}
+.hero-h1 em {
+  font-style: italic;
+  color: var(--copper-l);
+}
+
+.hero-sub {
+  font-size: 1rem;
+  font-weight: 300;
+  color: rgba(244,240,230,0.7);
+  line-height: 1.75;
+  max-width: 460px;
+  margin-bottom: 3rem;
+}
+
+.hero-actions { display: flex; flex-direction: column; gap: 1rem; align-items: flex-start; }
+
+.btn-hero-primary {
+  display: inline-flex; align-items: center; gap: 0.6rem;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.78rem;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--ink);
+  background: var(--copper-l);
+  padding: 0.95rem 2rem;
+  border-radius: 2px;
+  transition: background 0.2s, transform 0.15s;
+}
+.btn-hero-primary:hover { background: var(--copper); transform: translateY(-1px); }
+
+.btn-hero-ghost {
+  display: inline-flex; align-items: center; gap: 0.6rem;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.78rem;
+  font-weight: 300;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: rgba(244,240,230,0.6);
+  border-bottom: 1px solid rgba(244,240,230,0.25);
+  padding-bottom: 0.2rem;
+  transition: color 0.2s, border-color 0.2s;
+}
+.btn-hero-ghost:hover { color: var(--ivory); border-color: rgba(244,240,230,0.6); }
+
+/* Right side of hero — editorial stats */
+.hero-issue {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.7rem;
+  font-weight: 300;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+.hero-pull {
+  font-family: 'Libre Baskerville', serif;
+  font-size: clamp(1.5rem, 2.5vw, 2.4rem);
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.35;
+  color: var(--ink);
+  border-left: 3px solid var(--copper);
+  padding-left: 1.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.hero-stat-stack { display: flex; flex-direction: column; gap: 0; }
+.hero-stat-row {
+  display: flex; align-items: baseline; gap: 1.5rem;
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--warm);
+}
+.hero-stat-row:last-child { border-bottom: 1px solid var(--warm); }
+.stat-num {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1;
+  min-width: 120px;
+}
+.stat-num span { font-size: 1.2rem; color: var(--copper); }
+.stat-label {
+  font-size: 0.88rem;
+  font-weight: 300;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+/* ── TICKER ───────────────────────────────────────── */
+.ticker-wrap {
+  overflow: hidden;
+  background: var(--ink2);
+  padding: 0.9rem 0;
+  position: relative; z-index: 2;
+}
+.ticker-inner {
+  display: flex;
+  width: max-content;
+  animation: ticker 28s linear infinite;
+}
+.ticker-item {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.72rem;
+  font-weight: 300;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(244,240,230,0.5);
+  white-space: nowrap;
+  padding: 0 3rem;
+}
+.ticker-item .sep { color: var(--copper); margin: 0 0.5rem; }
+@keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+/* ── SECTION WRAPPER ──────────────────────────────── */
+.section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 7rem 3.5rem;
+}
+.section-sm { padding: 5rem 3.5rem; }
+
+.label {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.68rem;
+  font-weight: 300;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--copper);
+  margin-bottom: 1.25rem;
+  display: block;
+}
+
+.section-h2 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: clamp(2rem, 3.5vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.12;
+  color: var(--ink);
+}
+.section-h2 em { font-style: italic; color: var(--copper); }
+
+/* ── ABOUT: Split editorial ───────────────────────── */
+.about-wrap {
+  background: var(--white);
+  border-top: 4px solid var(--ink);
+}
+.about-inner {
+  max-width: 1200px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1fr;
+  padding: 6rem 3.5rem;
+  gap: 6rem;
+  align-items: start;
+}
+.about-left {}
+.about-left p {
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--muted);
+  line-height: 1.85;
+  margin-top: 1.75rem;
+}
+.about-left p strong { color: var(--ink); font-weight: 500; }
+
+.credential-list { margin-top: 2.5rem; display: flex; flex-direction: column; gap: 0; }
+.credential-row {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--warm);
+}
+.cred-left { display: flex; align-items: center; gap: 1rem; }
+.cred-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--copper); flex-shrink: 0;
+}
+.cred-text { font-size: 0.9rem; font-weight: 400; color: var(--ink); }
+.cred-right {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.72rem; font-weight: 300;
+  color: var(--muted); letter-spacing: 0.08em;
+}
+
+.about-right {}
+.about-pull {
+  font-family: 'Libre Baskerville', serif;
+  font-size: clamp(1.4rem, 2vw, 2rem);
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.45;
+  color: var(--ink);
+  padding-left: 2rem;
+  border-left: 2px solid var(--copper);
+  margin-bottom: 3rem;
+}
+
+.capability-grid { display: flex; flex-direction: column; gap: 0; }
+.cap-item {
+  display: grid; grid-template-columns: 2rem 1fr;
+  gap: 1rem; align-items: start;
+  padding: 1.1rem 0;
+  border-bottom: 1px solid var(--ivory2);
+}
+.cap-num {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.7rem; font-weight: 300;
+  color: var(--copper); letter-spacing: 0.05em;
+  padding-top: 0.2rem;
+}
+.cap-text { font-size: 0.92rem; font-weight: 400; color: var(--ink2); line-height: 1.5; }
+
+/* ── PROCESS ──────────────────────────────────────── */
+.process-wrap { background: var(--ink); }
+.process-inner {
+  max-width: 1200px; margin: 0 auto;
+  padding: 7rem 3.5rem;
+}
+.process-header { margin-bottom: 4rem; }
+.process-header .label { color: var(--copper-l); }
+.process-h2 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: clamp(2rem, 3vw, 3.2rem);
+  font-weight: 700;
+  color: var(--ivory);
+  line-height: 1.15;
+}
+.process-h2 em { font-style: italic; color: var(--copper-l); }
+
+.process-steps {
+  display: grid; grid-template-columns: repeat(4,1fr);
+  gap: 0;
+  border: 1px solid rgba(244,240,230,0.1);
+}
+.process-step {
+  padding: 2.5rem 2rem;
+  border-right: 1px solid rgba(244,240,230,0.1);
+  transition: background 0.25s;
+  position: relative;
+}
+.process-step:last-child { border-right: none; }
+.process-step:hover { background: rgba(244,240,230,0.04); }
+
+.step-num {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: rgba(184,115,51,0.2);
+  line-height: 1;
+  margin-bottom: 1.5rem;
+}
+.step-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--ivory);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.75rem;
+}
+.step-week {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.65rem;
+  font-weight: 300;
+  color: var(--copper-l);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+.step-body { font-size: 0.9rem; font-weight: 300; color: rgba(244,240,230,0.6); line-height: 1.7; }
+
+/* Style callout below steps */
+.process-callout {
+  margin-top: 0;
+  border: 1px solid rgba(244,240,230,0.1);
+  border-top: none;
+  padding: 2rem 3rem;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 2rem;
+}
+.callout-text { font-size: 0.9rem; font-weight: 300; color: rgba(244,240,230,0.55); font-style: italic; }
+.callout-cta {
+  display: inline-flex; align-items: center; gap: 0.6rem;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.72rem; font-weight: 400;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--copper-l);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(184,115,51,0.4);
+  padding-bottom: 0.15rem;
+  white-space: nowrap;
+  transition: color 0.2s;
+}
+.callout-cta:hover { color: var(--copper); }
+
+/* ── SERVICES ─────────────────────────────────────── */
+.services-wrap {
+  max-width: 1200px; margin: 0 auto;
+  padding: 7rem 3.5rem;
+}
+.services-header { margin-bottom: 3.5rem; }
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+.svc-card {
+  background: var(--white);
+  border: 1px solid var(--warm);
+  padding: 2.5rem;
+  border-radius: 2px;
+  position: relative;
+  transition: border-color 0.2s, transform 0.15s;
+}
+.svc-card:hover { border-color: var(--copper); transform: translateY(-2px); }
+.svc-card.featured {
+  background: var(--ink);
+  border-color: var(--ink);
+  grid-column: span 2;
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 3rem; align-items: start;
+}
+.svc-tag {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.65rem; font-weight: 300;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--copper);
+  margin-bottom: 1rem; display: block;
+}
+.svc-card.featured .svc-tag { color: var(--copper-l); }
+.svc-name {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.7rem; font-weight: 700;
+  color: var(--ink); margin-bottom: 0.5rem;
+}
+.svc-card.featured .svc-name { color: var(--ivory); font-size: 2.2rem; }
+.svc-price {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.8rem; font-weight: 400;
+  color: var(--muted); margin-bottom: 1.5rem;
+  letter-spacing: 0.05em;
+}
+.svc-card.featured .svc-price { color: var(--copper-l); font-size: 0.9rem; }
+.svc-desc { font-size: 0.9rem; font-weight: 300; color: var(--muted); line-height: 1.7; margin-bottom: 1.5rem; }
+.svc-card.featured .svc-desc { color: rgba(244,240,230,0.65); }
+.svc-items { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+.svc-items li {
+  font-size: 0.88rem; font-weight: 300; color: var(--ink2);
+  display: flex; align-items: flex-start; gap: 0.75rem; line-height: 1.5;
+}
+.svc-card.featured .svc-items li { color: rgba(244,240,230,0.75); }
+.svc-items li::before {
+  content: '—';
+  color: var(--copper);
+  font-family: 'DM Mono', monospace;
+  font-size: 0.75rem;
+  flex-shrink: 0; margin-top: 0.1rem;
+}
+
+/* ── PROOF ────────────────────────────────────────── */
+.proof-wrap {
+  background: var(--ivory2);
+  border-top: 1px solid var(--warm);
+  border-bottom: 1px solid var(--warm);
+}
+.proof-inner {
+  max-width: 1200px; margin: 0 auto;
+  padding: 7rem 3.5rem;
+}
+.proof-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 4rem; margin-top: 3.5rem;
+}
+.proof-card {}
+.proof-quote {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.1rem;
+  font-style: italic;
+  line-height: 1.75;
+  color: var(--ink2);
+  margin-bottom: 1.75rem;
+}
+.proof-quote::before {
+  content: '\201C';
+  font-size: 3rem;
+  color: var(--copper);
+  line-height: 0;
+  vertical-align: -0.7rem;
+  margin-right: 0.2rem;
+  font-style: normal;
+}
+.proof-sig { display: flex; flex-direction: column; gap: 0.2rem; }
+.proof-name { font-size: 0.9rem; font-weight: 600; color: var(--ink); }
+.proof-role { font-family: 'DM Mono', monospace; font-size: 0.7rem; font-weight: 300; color: var(--muted); letter-spacing: 0.08em; }
+
+.proof-stat-row {
+  margin-top: 4rem;
+  display: grid; grid-template-columns: repeat(3,1fr);
+  border-top: 1px solid var(--warm);
+  border-left: 1px solid var(--warm);
+}
+.proof-stat {
+  padding: 2rem 2.5rem;
+  border-right: 1px solid var(--warm);
+  border-bottom: 1px solid var(--warm);
+}
+.proof-stat-num {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 3rem; font-weight: 700;
+  color: var(--ink); line-height: 1;
+  margin-bottom: 0.5rem;
+}
+.proof-stat-num em { font-style: normal; color: var(--copper); font-size: 1.5rem; }
+.proof-stat-label { font-size: 0.85rem; font-weight: 300; color: var(--muted); line-height: 1.5; }
+
+/* ── FIT SECTION ─────────────────────────────────── */
+.fit-wrap {
+  background: var(--white);
+}
+.fit-inner {
+  max-width: 1200px; margin: 0 auto;
+  padding: 7rem 3.5rem;
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 6rem; align-items: start;
+}
+.fit-left {}
+.fit-left .section-h2 { margin-bottom: 2rem; }
+.fit-left p { font-size: 0.95rem; font-weight: 300; color: var(--muted); line-height: 1.8; margin-bottom: 1.5rem; }
+
+.fit-items { display: flex; flex-direction: column; gap: 0; }
+.fit-item {
+  display: flex; align-items: center; gap: 1.25rem;
+  padding: 0.95rem 0;
+  border-bottom: 1px solid var(--ivory2);
+}
+.fit-check {
+  width: 20px; height: 20px;
+  border: 1px solid var(--copper);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.fit-check::after {
+  content: '';
+  width: 6px; height: 6px;
+  background: var(--copper);
+  border-radius: 50%;
+}
+.fit-item-text { font-size: 0.9rem; font-weight: 300; color: var(--ink2); line-height: 1.5; }
+
+.fit-right {}
+.not-fit-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.68rem; font-weight: 300;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 1.25rem; display: block;
+}
+.not-fit-h { font-family: 'Libre Baskerville', serif; font-size: 1.6rem; font-weight: 700; color: var(--ink); margin-bottom: 1.5rem; line-height: 1.2; }
+.not-fit-items { display: flex; flex-direction: column; gap: 0; }
+.not-fit-item {
+  display: flex; align-items: center; gap: 1.25rem;
+  padding: 0.95rem 0;
+  border-bottom: 1px solid var(--ivory2);
+}
+.not-fit-x {
+  width: 20px; height: 20px;
+  border: 1px solid var(--warm);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  font-size: 0.65rem; color: var(--warm);
+}
+.not-fit-text { font-size: 0.9rem; font-weight: 300; color: var(--muted); }
+
+.outcomes-box {
+  margin-top: 3rem;
+  background: var(--ink);
+  padding: 2.5rem;
+  border-radius: 2px;
+}
+.outcomes-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.65rem; font-weight: 300;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--copper-l); margin-bottom: 1.5rem; display: block;
+}
+.outcomes-list { display: flex; flex-direction: column; gap: 0.75rem; }
+.outcomes-list li {
+  font-size: 0.88rem; font-weight: 300;
+  color: rgba(244,240,230,0.7);
+  display: flex; gap: 0.75rem;
+  list-style: none;
+}
+.outcomes-list li::before { content: '→'; color: var(--copper-l); flex-shrink: 0; }
+
+/* ── CTA ──────────────────────────────────────────── */
+.cta-wrap { background: var(--ink); position: relative; overflow: hidden; }
+.cta-wrap::before {
+  content: '';
+  position: absolute; top: -100px; right: -100px;
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(184,115,51,0.12), transparent 65%);
+  pointer-events: none;
+}
+.cta-inner {
+  max-width: 1200px; margin: 0 auto;
+  padding: 7rem 3.5rem;
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 6rem; align-items: center;
+  position: relative; z-index: 1;
+}
+.cta-h {
+  font-family: 'Libre Baskerville', serif;
+  font-size: clamp(2rem, 3.5vw, 4rem);
+  font-weight: 700;
+  color: var(--ivory);
+  line-height: 1.1;
+}
+.cta-h em { font-style: italic; color: var(--copper-l); }
+.cta-right {}
+.cta-p {
+  font-size: 0.95rem; font-weight: 300;
+  color: rgba(244,240,230,0.6);
+  line-height: 1.85; margin-bottom: 2.5rem;
+}
+.btn-cta-primary {
+  display: inline-flex; align-items: center; gap: 0.75rem;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.78rem; font-weight: 400;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  text-decoration: none;
+  color: var(--ink);
+  background: var(--copper-l);
+  padding: 1.1rem 2.5rem;
+  border-radius: 2px;
+  transition: background 0.2s, transform 0.15s;
+  margin-bottom: 1.25rem; display: block; width: fit-content;
+}
+.btn-cta-primary:hover { background: var(--copper); transform: translateY(-2px); }
+.btn-cta-ghost {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.72rem; font-weight: 300;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  text-decoration: none;
+  color: rgba(244,240,230,0.45);
+  border-bottom: 1px solid rgba(244,240,230,0.15);
+  padding-bottom: 0.15rem;
+  transition: color 0.2s;
+}
+.btn-cta-ghost:hover { color: rgba(244,240,230,0.7); }
+
+.avail-badge {
+  display: inline-flex; align-items: center; gap: 0.6rem;
+  background: rgba(244,240,230,0.05);
+  border: 1px solid rgba(244,240,230,0.12);
+  padding: 0.65rem 1.25rem;
+  border-radius: 2px;
+  margin-top: 2rem;
+}
+.avail-dot { width: 6px; height: 6px; background: #5fba7d; border-radius: 50%; animation: pulse-dot 2s ease-in-out infinite; }
+@keyframes pulse-dot { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
+.avail-text { font-family: 'DM Mono', monospace; font-size: 0.68rem; font-weight: 300; letter-spacing: 0.12em; color: rgba(244,240,230,0.45); }
+
+/* ── FOOTER ───────────────────────────────────────── */
+footer {
+  background: var(--ink2);
+  padding: 2rem 3.5rem;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.footer-l { font-family: 'DM Mono', monospace; font-size: 0.68rem; font-weight: 300; color: rgba(244,240,230,0.3); letter-spacing: 0.1em; }
+.footer-r { font-family: 'DM Mono', monospace; font-size: 0.68rem; font-weight: 300; color: rgba(244,240,230,0.3); letter-spacing: 0.08em; }
+
+/* ── SCROLL REVEAL ────────────────────────────────── */
+.reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+
+/* ── RESPONSIVE ───────────────────────────────────── */
+@media (max-width: 860px) {
+  .hero { grid-template-columns: 1fr; }
+  .hero-left, .hero-right { padding: 4rem 2rem; }
+  .about-inner, .fit-inner, .cta-inner { grid-template-columns: 1fr; gap: 3rem; padding: 4rem 2rem; }
+  .process-steps { grid-template-columns: 1fr 1fr; }
+  .services-grid { grid-template-columns: 1fr; }
+  .svc-card.featured { grid-column: span 1; grid-template-columns: 1fr; gap: 2rem; }
+  .proof-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .proof-stat-row { grid-template-columns: 1fr; }
+  nav { padding: 1.25rem 2rem; }
+  .section { padding: 5rem 2rem; }
+  footer { flex-direction: column; gap: 0.5rem; text-align: center; }
+}
+</style>
 </head>
 <body>
-  <div class="page">
-    <nav>
-      <div>
-        <h3>Allie Swezey</h3>
-        <small>Strategic Operator</small>
-      </div>
-      <div>
-        <a href="#method">Method</a>
-        <a href="#services">Services</a>
-        <a href="#proof">Proof</a>
-        <a href="#fit">Fit</a>
-      </div>
-    </nav>
 
-    <header class="hero">
-      <h1>Operator on demand for founders and firms whose systems haven’t caught up.</h1>
-      <p>Allie brings nine years of enterprise IT sales rigor plus hands-on law firm operations to translate messy growth problems into investor-ready plans, clean books, and execution that sticks.</p>
-      <div style="display:flex; gap:1rem; flex-wrap:wrap; margin-bottom:2.5rem;">
-        <a class="btn btn-primary" href="contact.html">Book a strategy call</a>
-        <a class="btn btn-secondary" href="sample.html">See a sample deliverable</a>
-      </div>
-      <div class="hero-grid">
-        <div class="metric">
-          <strong>4 weeks</strong>
-          Evaluation sprint from intake to investor-ready plan.
-        </div>
-        <div class="metric">
-          <strong>$1M+</strong>
-          Gross margin added in 18 months at SHI.
-        </div>
-        <div class="metric">
-          <strong>100%</strong>
-          Participation in the last culture/ops pilot she led.
-        </div>
-        <div class="metric">
-          <strong>Zero</strong>
-          Unreconciled payments left hanging—financial integrity is non-negotiable.
-        </div>
-      </div>
-    </header>
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
 
-    <section id="problem">
-      <div class="section-header">
-        <p>Why teams call Allie</p>
-        <h2>When growth outruns infrastructure, she builds the missing layer.</h2>
-      </div>
-      <div class="card-grid">
-        <div class="card">
-          <h4>Ops chaos meets financial risk</h4>
-          <p>5.5M new businesses launched in 2023. Most don’t have clean ledgers, consistent billing, or a single owner of reconciliation. Allie closes that gap before boards or auditors force the issue.</p>
-        </div>
-        <div class="card">
-          <h4>Capex → Opex transitions</h4>
-          <p>Nine years at a $10B reseller taught her how to guide CFOs through licensing, SaaS adoption, and multi-vendor alignment without losing the plot.</p>
-        </div>
-        <div class="card">
-          <h4>Multiple hands, no process</h4>
-          <p>Law firms, agencies, and property managers often have partners, accountants, and assistants touching the same books differently. Allie installs audit-ready workflows everyone can follow.</p>
-        </div>
-      </div>
-    </section>
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-wordmark">Allie Swezey</div>
+  <div class="nav-links">
+    <a href="#method">Method</a>
+    <a href="#services">Services</a>
+    <a href="#proof">Proof</a>
+    <a href="#fit">Fit</a>
+    <a href="contact.html" class="nav-cta">Book a call</a>
+  </div>
+</nav>
 
-    <section id="method">
-      <div class="section-header">
-        <p>4-week evaluation sprint</p>
-        <h2>From messy inputs to a plan you can execute on Monday.</h2>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <div>
+      <p class="hero-eyebrow">Strategic Operator — Available Q2 2026</p>
+      <h1 class="hero-h1">From stuck<br>to <em>moving</em><br>in four weeks.</h1>
+      <p class="hero-sub">Allie Swezey closes the gap between good ideas and real execution. She works with founders and firm leaders who need strategy built, systems installed, and results that outlast the engagement.</p>
+    </div>
+    <div class="hero-actions">
+      <a href="contact.html" class="btn-hero-primary">Book a strategy call →</a>
+      <a href="sample.html" class="btn-hero-ghost">See a sample deliverable</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div>
+      <p class="hero-issue">Allie Swezey · Strategic Consulting</p>
+      <blockquote class="hero-pull">"She has materially improved how work flows across the firm and has become a trusted force multiplier for leadership."</blockquote>
+    </div>
+    <div class="hero-stat-stack">
+      <div class="hero-stat-row">
+        <div class="stat-num">$1M<span>+</span></div>
+        <div class="stat-label">Gross margin added in first 18 months at SHI International</div>
       </div>
-      <div class="timeline">
-        <div class="timeline-step">
-          <h4>Week 1 · Intake & triage</h4>
-          <p>Document ingest, stakeholder interviews, ledger review, and a working problem statement. Daily recon report starts here.</p>
-        </div>
-        <div class="timeline-step">
-          <h4>Week 2 · Analysis</h4>
-          <p>12-point 12-startups framework: market sizing, substitution threats, unit economics, GTM, and tech feasibility.</p>
-        </div>
-        <div class="timeline-step">
-          <h4>Week 3 · Deliverables</h4>
-          <p>Business plan, investor-ready mini deck, and VC-style red team memo with mitigations.</p>
-        </div>
-        <div class="timeline-step">
-          <h4>Week 4 · Conversion</h4>
-          <p>Operational backlog, financial reconciliation playbook, and optional execution retainer kickoff. Two sprint slots per month, first-come.</p>
-        </div>
+      <div class="hero-stat-row">
+        <div class="stat-num">150<span>%</span></div>
+        <div class="stat-label">Quota attainment — achieved three separate times at a $10B firm</div>
       </div>
-    </section>
+      <div class="hero-stat-row">
+        <div class="stat-num">9<span>yrs</span></div>
+        <div class="stat-label">Enterprise IT sales, licensing, and operational complexity at SHI</div>
+      </div>
+      <div class="hero-stat-row">
+        <div class="stat-num">4<span>wk</span></div>
+        <div class="stat-label">Sprint from intake to investor-ready strategy and operating plan</div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <section class="services" id="services">
-      <div class="section-header">
-        <p>Engagements</p>
-        <h2>Productized packages that keep scope sharp.</h2>
-      </div>
-      <div class="services-grid">
-        <div class="service-card">
-          <h3>Strategy Sprint</h3>
-          <p class="service-price">Starting at $2,500</p>
-          <ul>
-            <li>Executive summary + business plan</li>
-            <li>Competitive positioning snapshot</li>
-            <li>Two revision cycles</li>
-            <li>Scope guardrails + checklist</li>
-          </ul>
-        </div>
-        <div class="service-card featured">
-          <h3>Launchpad</h3>
-          <p class="service-price">Starting at $5,500</p>
-          <ul>
-            <li>Full 12-point evaluation sprint</li>
-            <li>Investor-ready deck + red team session</li>
-            <li>GTM playbook + 12-month financials</li>
-            <li>Audit-ready reconciliation workflow</li>
-          </ul>
-        </div>
-        <div class="service-card">
-          <h3>Ongoing Partner</h3>
-          <p class="service-price">From $3,500/mo</p>
-          <ul>
-            <li>Monthly strategy & ops reviews</li>
-            <li>Priority async support</li>
-            <li>Automation + vendor selection help</li>
-            <li>Retainer slots only after a sprint</li>
-          </ul>
-        </div>
-        <div class="service-card">
-          <h3>Systems & Ops Audit</h3>
-          <p class="service-price">Custom scoped</p>
-          <ul>
-            <li>Workflow mapping + bottleneck analysis</li>
-            <li>Tech stack & licensing audit</li>
-            <li>Accounting + compliance review</li>
-            <li>Implementation-ready recommendations</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+<!-- TICKER -->
+<div class="ticker-wrap" aria-hidden="true">
+  <div class="ticker-inner">
+    <span class="ticker-item">Strategic Ops <span class="sep">◆</span></span>
+    <span class="ticker-item">Financial Integrity <span class="sep">◆</span></span>
+    <span class="ticker-item">Cross-Functional Alignment <span class="sep">◆</span></span>
+    <span class="ticker-item">Investor-Ready Output <span class="sep">◆</span></span>
+    <span class="ticker-item">QBO Reconciliation <span class="sep">◆</span></span>
+    <span class="ticker-item">Enterprise Systems <span class="sep">◆</span></span>
+    <span class="ticker-item">Execution Without Drift <span class="sep">◆</span></span>
+    <span class="ticker-item">SOP Design <span class="sep">◆</span></span>
+    <span class="ticker-item">Accountability Loops <span class="sep">◆</span></span>
+    <span class="ticker-item">Pattern Recognition <span class="sep">◆</span></span>
+    <span class="ticker-item">Strategic Ops <span class="sep">◆</span></span>
+    <span class="ticker-item">Financial Integrity <span class="sep">◆</span></span>
+    <span class="ticker-item">Cross-Functional Alignment <span class="sep">◆</span></span>
+    <span class="ticker-item">Investor-Ready Output <span class="sep">◆</span></span>
+    <span class="ticker-item">QBO Reconciliation <span class="sep">◆</span></span>
+    <span class="ticker-item">Enterprise Systems <span class="sep">◆</span></span>
+    <span class="ticker-item">Execution Without Drift <span class="sep">◆</span></span>
+    <span class="ticker-item">SOP Design <span class="sep">◆</span></span>
+    <span class="ticker-item">Accountability Loops <span class="sep">◆</span></span>
+    <span class="ticker-item">Pattern Recognition <span class="sep">◆</span></span>
+  </div>
+</div>
 
-    <section>
-      <div class="section-header">
-        <p>Financial integrity, built in</p>
-        <h2>Every system she ships could survive an audit.</h2>
-      </div>
-      <div class="card-grid">
-        <div class="card">
-          <h4>Reconciliation rigor</h4>
-          <p>Independent notebooks, QBO/FreshBooks cross-checks, bank statement verification — if the numbers don’t tie out, she keeps digging.</p>
-        </div>
-        <div class="card">
-          <h4>Operational integrity</h4>
-          <p>Line-item transparency, escalation paths, and documentation that stands up under scrutiny. No mystery fixes, no silent write-offs.</p>
-        </div>
-        <div class="card">
-          <h4>Calm, fact-based comms</h4>
-          <p>Vendors, accountants, and partners get clear next steps, not drama. She keeps conversations grounded in reconciled numbers.</p>
-        </div>
-      </div>
-    </section>
+<!-- ABOUT -->
+<div class="about-wrap" id="about">
+  <div class="about-inner">
+    <div class="about-left reveal">
+      <span class="label">The operator</span>
+      <h2 class="section-h2">Nine years of enterprise<br>rigor. Now yours.</h2>
+      <p>Allie spent nearly a decade at <strong>SHI International</strong> — a $10 billion global IT reseller — managing complex enterprise accounts, closing 7-figure deals, and building the joint account plans and QBR frameworks that sustained client relationships year over year.</p>
+      <p>She earned the <strong>$1M and $2M GM Crystal Awards</strong>, exceeded quota by 150%+ three separate times, and was elected to mentor new hires through SHI's Academy Program. She is a <strong>University of Texas at Austin</strong> alum.</p>
+      <p>Today she brings that same discipline to founders and firm leaders — translating operational chaos into clean systems, investor-ready strategy, and execution that holds up after she's gone.</p>
 
-    <section id="proof">
-      <div class="section-header">
-        <p>Proof</p>
-        <h2>What clients and pilots say.</h2>
-      </div>
-      <blockquote>
-        “At Halsted Law Firm, Allie has been a standout consultant and true operator. She quickly identifies where friction is costing time, quality, and momentum — then implements systems that actually stick.”<br><strong>Leadership Team, Halsted Law</strong>
-      </blockquote>
-      <blockquote>
-        “The pitch deck Allie built got us three investor meetings in the first week. She understands how investors think in a way most consultants simply don't.”<br><strong>Founder, industrial services startup</strong>
-      </blockquote>
-    </section>
-
-    <section id="fit">
-      <div class="section-header">
-        <p>Best-fit clients</p>
-        <h2>Where Allie’s work has the highest leverage.</h2>
-      </div>
-      <div class="card" style="margin-bottom:1.5rem;">
-        <h4>Ideal engagement profiles</h4>
-        <div class="ideal-list">
-          <p>• Small professional service firms (law, property mgmt, consulting)</p>
-          <p>• Founder-led businesses where ops outpaced systems</p>
-          <p>• Teams on QuickBooks Online struggling with reconciliation</p>
-          <p>• Multi-person finance workflows lacking clear ownership</p>
-          <p>• Organizations moving from Capex to Opex licensing</p>
-          <p>• Operators who want a partner that will also execute</p>
+      <div class="credential-list">
+        <div class="credential-row">
+          <div class="cred-left"><div class="cred-dot"></div><div class="cred-text">$2M GM Crystal Award — SHI International</div></div>
+          <div class="cred-right">Sustained Performance</div>
+        </div>
+        <div class="credential-row">
+          <div class="cred-left"><div class="cred-dot"></div><div class="cred-text">$1M GM Crystal Award — Member since 2015</div></div>
+          <div class="cred-right">SHI International</div>
+        </div>
+        <div class="credential-row">
+          <div class="cred-left"><div class="cred-dot"></div><div class="cred-text">Symantec Top Producer Award</div></div>
+          <div class="cred-right">2013</div>
+        </div>
+        <div class="credential-row">
+          <div class="cred-left"><div class="cred-dot"></div><div class="cred-text">SHI Academy Program — Elected Mentor</div></div>
+          <div class="cred-right">New Hire Cohorts</div>
+        </div>
+        <div class="credential-row">
+          <div class="cred-left"><div class="cred-dot"></div><div class="cred-text">University of Texas at Austin</div></div>
+          <div class="cred-right">Austin, TX</div>
         </div>
       </div>
-      <div class="card">
-        <h4>Typical outcomes</h4>
-        <ul>
-          <li>Clean, daily reconciliation workflows tied to actual cash</li>
-          <li>Standardized billing + payment processes across teams</li>
-          <li>Leadership-ready reporting with real KPIs</li>
-          <li>Aligned operations and accounting teams working from one playbook</li>
+    </div>
+
+    <div class="about-right reveal reveal-delay-2">
+      <blockquote class="about-pull">"The combination of strategic clarity and operational follow-through is rare. Allie brings both — she shapes the plan and then drives it through completion."</blockquote>
+
+      <div class="capability-grid">
+        <div class="cap-item">
+          <div class="cap-num">01</div>
+          <div class="cap-text">Translating messy, competing priorities into clear strategic plans with defined owners and timelines</div>
+        </div>
+        <div class="cap-item">
+          <div class="cap-num">02</div>
+          <div class="cap-text">Diagnosing operational bottlenecks and building SOPs, handoffs, and accountability loops that actually stick</div>
+        </div>
+        <div class="cap-item">
+          <div class="cap-num">03</div>
+          <div class="cap-text">Cross-functional alignment across leadership, legal, ops, finance, and client-facing teams</div>
+        </div>
+        <div class="cap-item">
+          <div class="cap-num">04</div>
+          <div class="cap-text">Financial systems with internal-audit integrity — clean ledgers, traceable decisions, defensible processes</div>
+        </div>
+        <div class="cap-item">
+          <div class="cap-num">05</div>
+          <div class="cap-text">Driving initiatives from concept to implementation with minimal drift and maximum follow-through</div>
+        </div>
+        <div class="cap-item">
+          <div class="cap-num">06</div>
+          <div class="cap-text">Turning client-facing chaos into repeatable service delivery that scales without her direct involvement</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PROCESS -->
+<div class="process-wrap" id="method">
+  <div class="process-inner">
+    <div class="process-header reveal">
+      <span class="label">The method</span>
+      <h2 class="process-h2">Four weeks from <em>intake</em><br>to execution-ready.</h2>
+    </div>
+    <div class="process-steps">
+      <div class="process-step reveal">
+        <div class="step-num">01</div>
+        <div class="step-week">Week 1</div>
+        <div class="step-title">Intake & Triage</div>
+        <div class="step-body">Document ingest, stakeholder interviews, ledger review, and a working problem statement. Daily reconciliation report starts here for firms. Clear priorities documented by Friday.</div>
+      </div>
+      <div class="process-step reveal reveal-delay-1">
+        <div class="step-num">02</div>
+        <div class="step-week">Week 2</div>
+        <div class="step-title">Analysis</div>
+        <div class="step-body">12-point framework: market sizing, competitive positioning, unit economics, GTM, tech feasibility, and red team scenario planning. No assumptions left unchallenged.</div>
+      </div>
+      <div class="process-step reveal reveal-delay-2">
+        <div class="step-num">03</div>
+        <div class="step-week">Week 3</div>
+        <div class="step-title">Deliverables</div>
+        <div class="step-body">Business plan, investor-ready deck, VC-style red team memo with mitigations. For ops engagements: SOP library, workflow maps, and accountability framework.</div>
+      </div>
+      <div class="process-step reveal reveal-delay-3">
+        <div class="step-num">04</div>
+        <div class="step-week">Week 4</div>
+        <div class="step-title">Conversion</div>
+        <div class="step-body">Operational backlog, financial reconciliation playbook, and optional execution retainer kickoff. You leave with a plan you can execute on Monday — not a binder on a shelf.</div>
+      </div>
+    </div>
+    <div class="process-callout reveal">
+      <div class="callout-text">Two sprint slots available per month — first-come, first-served. Retainers only available after a completed sprint.</div>
+      <a href="contact.html" class="callout-cta">Check availability →</a>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<div id="services">
+  <div class="services-wrap">
+    <div class="services-header reveal">
+      <span class="label">Engagements</span>
+      <h2 class="section-h2">Productized packages.<br><em>Sharp scope, real output.</em></h2>
+    </div>
+    <div class="services-grid">
+      <!-- Featured: Launchpad -->
+      <div class="svc-card featured reveal">
+        <div>
+          <span class="svc-tag">Most Popular · Full Sprint</span>
+          <h3 class="svc-name">Launchpad</h3>
+          <p class="svc-price">Starting at $5,500</p>
+          <p class="svc-desc">The complete evaluation sprint — from idea or operational challenge through to investor-ready strategy, execution plan, and reconciliation framework.</p>
+        </div>
+        <ul class="svc-items">
+          <li>Full 12-point strategy evaluation</li>
+          <li>Investor-ready business plan + pitch deck</li>
+          <li>VC-style red team session with mitigations</li>
+          <li>GTM playbook + 12-month financial model</li>
+          <li>Operational backlog + accountability framework</li>
+          <li>Audit-ready reconciliation workflow (firms)</li>
+          <li>Four weeks. Two revision cycles.</li>
         </ul>
       </div>
-    </section>
-
-    <section>
-      <div class="section-header">
-        <p>Next steps</p>
-        <h2>Two April sprint slots open.</h2>
+      <!-- Strategy Sprint -->
+      <div class="svc-card reveal reveal-delay-1">
+        <span class="svc-tag">Founders · Pre-Fundraise</span>
+        <h3 class="svc-name">Strategy Sprint</h3>
+        <p class="svc-price">Starting at $2,500</p>
+        <p class="svc-desc">The essentials, fast. Executive summary, competitive positioning, and a business plan built to survive VC scrutiny.</p>
+        <ul class="svc-items">
+          <li>Executive summary + business plan</li>
+          <li>Competitive positioning snapshot</li>
+          <li>Core risk identification</li>
+          <li>Two revision cycles</li>
+        </ul>
       </div>
-      <p style="margin-bottom:1.5rem;">Tell her where the breakdown is — financial, operational, or narrative. She’ll respond within one business day with next steps, and you’ll know within a week if it’s a fit.</p>
-      <a class="btn btn-primary" href="contact.html">Book a 30-minute strategy call →</a>
-    </section>
-
-    <footer>
-      Prototype v2 preview — no tracking, no indexing. © 2026 Allie Swezey.
-    </footer>
+      <!-- Systems Audit -->
+      <div class="svc-card reveal reveal-delay-2">
+        <span class="svc-tag">Established Firms · Ops</span>
+        <h3 class="svc-name">Systems & Ops Audit</h3>
+        <p class="svc-price">Custom scoped</p>
+        <p class="svc-desc">For firms where growth outpaced infrastructure. Workflow mapping, financial systems review, and implementation-ready recommendations.</p>
+        <ul class="svc-items">
+          <li>Workflow mapping + bottleneck analysis</li>
+          <li>Tech stack & licensing audit</li>
+          <li>QBO / accounting systems review</li>
+          <li>Implementation-ready action plan</li>
+        </ul>
+      </div>
+      <!-- Ongoing -->
+      <div class="svc-card reveal reveal-delay-3">
+        <span class="svc-tag">Post-Sprint · Ongoing</span>
+        <h3 class="svc-name">Ongoing Partner</h3>
+        <p class="svc-price">From $3,500/mo</p>
+        <p class="svc-desc">Monthly strategy and ops reviews, priority async access, and continued execution support. Only available to clients who've completed a sprint.</p>
+        <ul class="svc-items">
+          <li>Monthly strategy + ops reviews</li>
+          <li>Priority async support</li>
+          <li>Automation + vendor selection help</li>
+          <li>Retainer slots only after sprint</li>
+        </ul>
+      </div>
+    </div>
   </div>
+</div>
+
+<!-- PROOF -->
+<div class="proof-wrap" id="proof">
+  <div class="proof-inner">
+    <span class="label reveal">Client results</span>
+    <h2 class="section-h2 reveal">What happens<br><em>after she starts.</em></h2>
+
+    <div class="proof-grid">
+      <div class="proof-card reveal">
+        <p class="proof-quote">At Halsted Law Firm, Allie has been a standout consultant and true operator. She quickly identifies where friction is costing time, quality, and momentum — then implements systems that actually stick. She has materially improved how work flows across the firm and has become a trusted force multiplier for leadership.</p>
+        <div class="proof-sig">
+          <div class="proof-name">Leadership, Halsted Law Firm</div>
+          <div class="proof-role">Operations & Strategic Consulting</div>
+        </div>
+      </div>
+      <div class="proof-card reveal reveal-delay-1">
+        <p class="proof-quote">The pitch deck Allie built got us three investor meetings in the first week. She understands how investors think in a way most consultants simply don't. The red team session was the most valuable hour of the whole engagement.</p>
+        <div class="proof-sig">
+          <div class="proof-name">Co-Founder, Industrial Services Startup</div>
+          <div class="proof-role">Pre-Seed Fundraising</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="proof-stat-row">
+      <div class="proof-stat reveal">
+        <div class="proof-stat-num">$1M<em>+</em></div>
+        <div class="proof-stat-label">Gross margin growth in first 18 months of her tenure at SHI</div>
+      </div>
+      <div class="proof-stat reveal reveal-delay-1">
+        <div class="proof-stat-num">7<em>-fig</em></div>
+        <div class="proof-stat-label">Enterprise deals closed with complex terms, multi-year contracts</div>
+      </div>
+      <div class="proof-stat reveal reveal-delay-2">
+        <div class="proof-stat-num">200<em>%</em></div>
+        <div class="proof-stat-label">Peak quota attainment — hit twice over a nine-year career</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FIT -->
+<div class="fit-wrap" id="fit">
+  <div class="fit-inner">
+    <div class="fit-left reveal">
+      <span class="label">Best-fit clients</span>
+      <h2 class="section-h2">Where Allie's work has<br><em>the highest leverage.</em></h2>
+      <p>She's most effective when there's real complexity to untangle — whether that's a founder who needs rigorous strategy before building, or a firm where multiple people are touching the same workflows without clear ownership.</p>
+
+      <div class="fit-items">
+        <div class="fit-item">
+          <div class="fit-check"></div>
+          <div class="fit-item-text">Small professional service firms — law, property mgmt, consulting</div>
+        </div>
+        <div class="fit-item">
+          <div class="fit-check"></div>
+          <div class="fit-item-text">Founder-led businesses where operations outpaced systems</div>
+        </div>
+        <div class="fit-item">
+          <div class="fit-check"></div>
+          <div class="fit-item-text">Teams on QuickBooks Online with reconciliation or A/R pain</div>
+        </div>
+        <div class="fit-item">
+          <div class="fit-check"></div>
+          <div class="fit-item-text">Multi-person finance workflows without clear process ownership</div>
+        </div>
+        <div class="fit-item">
+          <div class="fit-check"></div>
+          <div class="fit-item-text">Orgs navigating Capex-to-Opex licensing transitions</div>
+        </div>
+        <div class="fit-item">
+          <div class="fit-check"></div>
+          <div class="fit-item-text">Operators who want a partner who also executes</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="fit-right reveal reveal-delay-2">
+      <span class="not-fit-label">Where it's not a fit</span>
+      <h3 class="not-fit-h">Allie works best when<br>there's real work to do.</h3>
+      <div class="not-fit-items">
+        <div class="not-fit-item">
+          <div class="not-fit-x">✕</div>
+          <div class="not-fit-text">Pure advisory with no execution component</div>
+        </div>
+        <div class="not-fit-item">
+          <div class="not-fit-x">✕</div>
+          <div class="not-fit-text">Clients who've already hired to fix the problem</div>
+        </div>
+        <div class="not-fit-item">
+          <div class="not-fit-x">✕</div>
+          <div class="not-fit-text">Engagements without leadership buy-in or decision rights</div>
+        </div>
+        <div class="not-fit-item">
+          <div class="not-fit-x">✕</div>
+          <div class="not-fit-text">Teams looking for validation rather than honest diagnosis</div>
+        </div>
+      </div>
+
+      <div class="outcomes-box">
+        <span class="outcomes-label">Typical outcomes</span>
+        <ul class="outcomes-list">
+          <li>Clean daily reconciliation workflows tied to actual cash</li>
+          <li>Standardized billing + payment processes across teams</li>
+          <li>Leadership-ready reporting with real KPIs — not vanity metrics</li>
+          <li>Aligned ops and accounting working from one playbook</li>
+          <li>Investor-ready strategy that survives the red team</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="cta-wrap">
+  <div class="cta-inner">
+    <h2 class="cta-h reveal">Two sprint slots<br>open in <em>April.</em></h2>
+    <div class="cta-right reveal reveal-delay-2">
+      <p class="cta-p">Tell her where the breakdown is — financial, operational, or narrative. She'll respond within one business day. You'll know within a week whether it's a fit, and have a plan to move forward if it is.</p>
+      <a href="contact.html" class="btn-cta-primary">Book a 30-minute strategy call →</a>
+      <a href="sample.html" class="btn-cta-ghost">See a free sample deliverable</a>
+      <div class="avail-badge">
+        <div class="avail-dot"></div>
+        <div class="avail-text">Accepting new clients · Q2 2026</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-l">© 2026 Allie Swezey · hello@allieswezey.com · Austin, TX</div>
+  <div class="footer-r">Prototype v2 · Noindex · No tracking</div>
+</footer>
+
+<script>
+// ── Cursor ──────────────────────────────────────────
+const dot  = document.getElementById('cursorDot');
+const ring = document.getElementById('cursorRing');
+let mx = 0, my = 0, rx = 0, ry = 0;
+document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+(function animCursor() {
+  dot.style.left  = mx + 'px';
+  dot.style.top   = my + 'px';
+  rx += (mx - rx) * 0.14;
+  ry += (my - ry) * 0.14;
+  ring.style.left = rx + 'px';
+  ring.style.top  = ry + 'px';
+  requestAnimationFrame(animCursor);
+})();
+
+// ── Nav scroll ──────────────────────────────────────
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 60);
+});
+
+// ── Reveal on scroll ────────────────────────────────
+const revealEls = document.querySelectorAll('.reveal');
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+}, { threshold: 0.12 });
+revealEls.forEach(el => io.observe(el));
+</script>
 </body>
 </html>
