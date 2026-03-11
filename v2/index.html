@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Allie Swezey — Operator for Teams in Transition</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #0d1d2a;
+      --ink-light: #1f3647;
+      --sand: #f5f0e8;
+      --stone: #d9d1c4;
+      --accent: #caa552;
+      --accent-dark: #a78531;
+      --mist: #6f7d87;
+      --white: #ffffff;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Space Grotesk', sans-serif;
+      background: var(--sand);
+      color: var(--ink);
+      line-height: 1.6;
+    }
+    h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
+    a { text-decoration: none; color: inherit; }
+    .page { max-width: 1180px; margin: 0 auto; padding: 0 2rem 5rem; }
+    nav { display: flex; justify-content: space-between; align-items: center; padding: 1.75rem 0; position: sticky; top: 0; background: var(--sand); z-index: 10; }
+    nav a { font-size: 0.85rem; letter-spacing: 0.08em; color: var(--mist); margin-left: 1.5rem; text-transform: uppercase; }
+    .btn { display: inline-flex; align-items: center; gap: 0.4rem; text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.8rem; padding: 0.9rem 1.6rem; border-radius: 999px; border: 1px solid transparent; transition: all 0.2s ease; }
+    .btn-primary { background: var(--ink); color: var(--sand); }
+    .btn-primary:hover { background: var(--accent-dark); }
+    .btn-secondary { border-color: var(--ink); color: var(--ink); }
+    .hero { background: var(--ink); color: var(--sand); border-radius: 32px; padding: 4rem; margin-bottom: 3rem; position: relative; overflow: hidden; }
+    .hero::after { content: ""; position: absolute; top: -40px; right: -40px; width: 220px; height: 220px; background: radial-gradient(circle, rgba(202,165,82,0.4), transparent); }
+    .hero h1 { font-size: clamp(2.6rem, 4vw, 4.4rem); line-height: 1.1; margin-bottom: 1.5rem; }
+    .hero p { max-width: 620px; color: rgba(245,240,232,0.85); margin-bottom: 2rem; }
+    .hero-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(180px,1fr)); gap: 1rem; }
+    .metric { background: rgba(255,255,255,0.08); padding: 1.2rem; border-radius: 18px; border: 1px solid rgba(255,255,255,0.1); }
+    .metric strong { display: block; font-size: 2rem; }
+    section { margin-top: 4rem; }
+    .section-header { margin-bottom: 1.5rem; }
+    .section-header p { color: var(--mist); letter-spacing: 0.1em; font-size: 0.8rem; text-transform: uppercase; }
+    .card-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap: 1.5rem; }
+    .card { background: var(--white); border-radius: 18px; padding: 1.75rem; border: 1px solid var(--stone); }
+    .timeline { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 1.5rem; }
+    .timeline-step { background: var(--white); border-left: 4px solid var(--accent); padding: 1.5rem; border-radius: 12px; }
+    .services { border-radius: 24px; background: var(--ink); color: var(--sand); padding: 3rem; }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 1.2rem; margin-top: 2rem; }
+    .service-card { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: 16px; padding: 1.5rem; }
+    .service-card.featured { background: var(--accent); color: var(--ink); }
+    .service-card ul { margin-top: 1rem; padding-left: 1rem; font-size: 0.95rem; }
+    blockquote { background: var(--white); border-left: 4px solid var(--accent); padding: 1.5rem; margin-top: 1rem; border-radius: 12px; font-style: italic; }
+    .ideal-list { columns: 2; column-gap: 2rem; }
+    footer { margin-top: 4rem; padding: 3rem 0; text-align: center; color: var(--mist); font-size: 0.85rem; }
+    @media (max-width: 720px) {
+      .hero { padding: 2.5rem; }
+      nav { flex-direction: column; gap: 1rem; }
+      .ideal-list { columns: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <nav>
+      <div>
+        <h3>Allie Swezey</h3>
+        <small>Strategic Operator</small>
+      </div>
+      <div>
+        <a href="#method">Method</a>
+        <a href="#services">Services</a>
+        <a href="#proof">Proof</a>
+        <a href="#fit">Fit</a>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <h1>Operator on demand for founders and firms whose systems haven’t caught up.</h1>
+      <p>Allie brings nine years of enterprise IT sales rigor plus hands-on law firm operations to translate messy growth problems into investor-ready plans, clean books, and execution that sticks.</p>
+      <div style="display:flex; gap:1rem; flex-wrap:wrap; margin-bottom:2.5rem;">
+        <a class="btn btn-primary" href="contact.html">Book a strategy call</a>
+        <a class="btn btn-secondary" href="sample.html">See a sample deliverable</a>
+      </div>
+      <div class="hero-grid">
+        <div class="metric">
+          <strong>4 weeks</strong>
+          Evaluation sprint from intake to investor-ready plan.
+        </div>
+        <div class="metric">
+          <strong>$1M+</strong>
+          Gross margin added in 18 months at SHI.
+        </div>
+        <div class="metric">
+          <strong>100%</strong>
+          Participation in the last culture/ops pilot she led.
+        </div>
+        <div class="metric">
+          <strong>Zero</strong>
+          Unreconciled payments left hanging—financial integrity is non-negotiable.
+        </div>
+      </div>
+    </header>
+
+    <section id="problem">
+      <div class="section-header">
+        <p>Why teams call Allie</p>
+        <h2>When growth outruns infrastructure, she builds the missing layer.</h2>
+      </div>
+      <div class="card-grid">
+        <div class="card">
+          <h4>Ops chaos meets financial risk</h4>
+          <p>5.5M new businesses launched in 2023. Most don’t have clean ledgers, consistent billing, or a single owner of reconciliation. Allie closes that gap before boards or auditors force the issue.</p>
+        </div>
+        <div class="card">
+          <h4>Capex → Opex transitions</h4>
+          <p>Nine years at a $10B reseller taught her how to guide CFOs through licensing, SaaS adoption, and multi-vendor alignment without losing the plot.</p>
+        </div>
+        <div class="card">
+          <h4>Multiple hands, no process</h4>
+          <p>Law firms, agencies, and property managers often have partners, accountants, and assistants touching the same books differently. Allie installs audit-ready workflows everyone can follow.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="method">
+      <div class="section-header">
+        <p>4-week evaluation sprint</p>
+        <h2>From messy inputs to a plan you can execute on Monday.</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-step">
+          <h4>Week 1 · Intake & triage</h4>
+          <p>Document ingest, stakeholder interviews, ledger review, and a working problem statement. Daily recon report starts here.</p>
+        </div>
+        <div class="timeline-step">
+          <h4>Week 2 · Analysis</h4>
+          <p>12-point 12-startups framework: market sizing, substitution threats, unit economics, GTM, and tech feasibility.</p>
+        </div>
+        <div class="timeline-step">
+          <h4>Week 3 · Deliverables</h4>
+          <p>Business plan, investor-ready mini deck, and VC-style red team memo with mitigations.</p>
+        </div>
+        <div class="timeline-step">
+          <h4>Week 4 · Conversion</h4>
+          <p>Operational backlog, financial reconciliation playbook, and optional execution retainer kickoff. Two sprint slots per month, first-come.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="services">
+      <div class="section-header">
+        <p>Engagements</p>
+        <h2>Productized packages that keep scope sharp.</h2>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>Strategy Sprint</h3>
+          <p class="service-price">Starting at $2,500</p>
+          <ul>
+            <li>Executive summary + business plan</li>
+            <li>Competitive positioning snapshot</li>
+            <li>Two revision cycles</li>
+            <li>Scope guardrails + checklist</li>
+          </ul>
+        </div>
+        <div class="service-card featured">
+          <h3>Launchpad</h3>
+          <p class="service-price">Starting at $5,500</p>
+          <ul>
+            <li>Full 12-point evaluation sprint</li>
+            <li>Investor-ready deck + red team session</li>
+            <li>GTM playbook + 12-month financials</li>
+            <li>Audit-ready reconciliation workflow</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <h3>Ongoing Partner</h3>
+          <p class="service-price">From $3,500/mo</p>
+          <ul>
+            <li>Monthly strategy & ops reviews</li>
+            <li>Priority async support</li>
+            <li>Automation + vendor selection help</li>
+            <li>Retainer slots only after a sprint</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <h3>Systems & Ops Audit</h3>
+          <p class="service-price">Custom scoped</p>
+          <ul>
+            <li>Workflow mapping + bottleneck analysis</li>
+            <li>Tech stack & licensing audit</li>
+            <li>Accounting + compliance review</li>
+            <li>Implementation-ready recommendations</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-header">
+        <p>Financial integrity, built in</p>
+        <h2>Every system she ships could survive an audit.</h2>
+      </div>
+      <div class="card-grid">
+        <div class="card">
+          <h4>Reconciliation rigor</h4>
+          <p>Independent notebooks, QBO/FreshBooks cross-checks, bank statement verification — if the numbers don’t tie out, she keeps digging.</p>
+        </div>
+        <div class="card">
+          <h4>Operational integrity</h4>
+          <p>Line-item transparency, escalation paths, and documentation that stands up under scrutiny. No mystery fixes, no silent write-offs.</p>
+        </div>
+        <div class="card">
+          <h4>Calm, fact-based comms</h4>
+          <p>Vendors, accountants, and partners get clear next steps, not drama. She keeps conversations grounded in reconciled numbers.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="proof">
+      <div class="section-header">
+        <p>Proof</p>
+        <h2>What clients and pilots say.</h2>
+      </div>
+      <blockquote>
+        “At Halsted Law Firm, Allie has been a standout consultant and true operator. She quickly identifies where friction is costing time, quality, and momentum — then implements systems that actually stick.”<br><strong>Leadership Team, Halsted Law</strong>
+      </blockquote>
+      <blockquote>
+        “The pitch deck Allie built got us three investor meetings in the first week. She understands how investors think in a way most consultants simply don't.”<br><strong>Founder, industrial services startup</strong>
+      </blockquote>
+    </section>
+
+    <section id="fit">
+      <div class="section-header">
+        <p>Best-fit clients</p>
+        <h2>Where Allie’s work has the highest leverage.</h2>
+      </div>
+      <div class="card" style="margin-bottom:1.5rem;">
+        <h4>Ideal engagement profiles</h4>
+        <div class="ideal-list">
+          <p>• Small professional service firms (law, property mgmt, consulting)</p>
+          <p>• Founder-led businesses where ops outpaced systems</p>
+          <p>• Teams on QuickBooks Online struggling with reconciliation</p>
+          <p>• Multi-person finance workflows lacking clear ownership</p>
+          <p>• Organizations moving from Capex to Opex licensing</p>
+          <p>• Operators who want a partner that will also execute</p>
+        </div>
+      </div>
+      <div class="card">
+        <h4>Typical outcomes</h4>
+        <ul>
+          <li>Clean, daily reconciliation workflows tied to actual cash</li>
+          <li>Standardized billing + payment processes across teams</li>
+          <li>Leadership-ready reporting with real KPIs</li>
+          <li>Aligned operations and accounting teams working from one playbook</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-header">
+        <p>Next steps</p>
+        <h2>Two April sprint slots open.</h2>
+      </div>
+      <p style="margin-bottom:1.5rem;">Tell her where the breakdown is — financial, operational, or narrative. She’ll respond within one business day with next steps, and you’ll know within a week if it’s a fit.</p>
+      <a class="btn btn-primary" href="contact.html">Book a 30-minute strategy call →</a>
+    </section>
+
+    <footer>
+      Prototype v2 preview — no tracking, no indexing. © 2026 Allie Swezey.
+    </footer>
+  </div>
+</body>
+</html>
